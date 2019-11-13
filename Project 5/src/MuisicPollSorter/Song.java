@@ -20,6 +20,11 @@ public class Song {
         return this.name;
     }
     
+    public boolean returnTrue()
+    {
+        return true;
+    }
+    
     public String getArtist()
     {
         return this.artist;
