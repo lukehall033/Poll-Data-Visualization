@@ -1,4 +1,4 @@
-package MusicSurvey;
+package MuisicPollSorter;
 import java.util.ArrayList;
 
 public class Student {
