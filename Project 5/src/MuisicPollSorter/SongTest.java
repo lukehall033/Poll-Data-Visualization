@@ -51,4 +51,11 @@ public class SongTest extends TestCase {
         assertFalse(song.equals(song4));
         assertFalse(song.equals(song5));
     }
+    
+    public void testEquals2()
+    {
+        //this is a test 
+    }
+    
+   
 }
