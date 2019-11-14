@@ -52,10 +52,17 @@ public class SongTest extends TestCase {
         assertFalse(song.equals(song5));
     }
     
+<<<<<<< HEAD
     public void testEquals2()
     {
         //this is a test 
     }
     
    
+=======
+    public void testtest()
+    {
+        Object obj = new Object();
+    }
+>>>>>>> branch 'master' of https://github.com/lukehall033/Project5.git
 }
