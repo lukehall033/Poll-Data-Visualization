@@ -1,42 +1,44 @@
 package MuisicPollSorter;
+
 import student.TestCase;
 
 public class SongTest extends TestCase {
 
     private Song song;
-    
-    public void setUp()
-    {
+
+
+    public void setUp() {
         song = new Song("Call Me", "Blondie", 1980, "dance rock");
     }
-    
-    public void testGetName()
-    {
+
+
+    public void testGetName() {
         assertEquals("Call Me", song.getName());
     }
-    
-    public void testGetArtist()
-    {
+
+
+    public void testGetArtist() {
         assertEquals("Blondie", song.getArtist());
     }
-    
-    public void testGetYear()
-    {
+
+
+    public void testGetYear() {
         assertEquals(1980, song.getYear());
     }
-    
-    public void testGetGenre()
-    {
+
+
+    public void testGetGenre() {
         assertEquals("dance rock", song.getGenre());
     }
-    
-    public void testToString()
-    {
-        assertEquals("Call Me by: Blondie, released: 1980 in genre dance rock", song.toString());
+
+
+    public void testToString() {
+        assertEquals("Call Me by: Blondie, released: 1980 in genre dance rock",
+            song.toString());
     }
-    
-    public void testEquals()
-    {
+
+
+    public void testEquals() {
         Object obj = new Object();
         assertFalse(song.equals(obj));
         obj = null;
@@ -51,18 +53,21 @@ public class SongTest extends TestCase {
         assertFalse(song.equals(song4));
         assertFalse(song.equals(song5));
     }
-    
-<<<<<<< HEAD
-    public void testEquals2()
-    {
-        //this is a test 
+
+    <<<<<<<HEAD
+
+
+    public void testEquals2() {
+        // this is a test
     }
-    
-   
-=======
+
+    =======
+
+
     public void testtest()
     {
         Object obj = new Object();
-    }
->>>>>>> branch 'master' of https://github.com/lukehall033/Project5.git
+    }>>>>>>>branch'master'
+
+    of https:// github.com/lukehall033/Project5.git
 }
