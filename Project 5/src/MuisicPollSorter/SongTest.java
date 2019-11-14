@@ -54,6 +54,6 @@ public class SongTest extends TestCase {
     
     public void testtest()
     {
-        
+        Object obj = new Object();
     }
 }
