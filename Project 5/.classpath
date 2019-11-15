@@ -10,5 +10,6 @@
 	<classpathentry combineaccessrules="false" kind="src" path="/CS2114-Support"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/ExInterfaceMeasurable"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/GraphWindowLib"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

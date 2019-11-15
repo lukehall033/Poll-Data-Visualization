@@ -1,5 +1,24 @@
+/**
+ * Virginia Tech Honor Code Pledge:
+ *
+ * As a Hokie, I will conduct myself with honor
+ * and integrity at all times.
+ * I will not lie, cheat, or steal, nor will I
+ * accept the actions of those who do.
+ * -- Allison Woods (awoods99)
+ * --
+ * --
+ */
 package MuisicPollSorter;
 
+/**
+ * 
+ * 
+ * @author
+ * @author
+ * @author Allison Woods (awoods99)
+ * @version 11/15/2019
+ */
 public class Song {
 
     private String name;
@@ -8,6 +27,14 @@ public class Song {
     private String genre;
 
 
+    /**
+     * 
+     * 
+     * @param songName
+     * @param songArtist
+     * @param songYear
+     * @param songGenre
+     */
     public Song(
         String songName,
         String songArtist,
@@ -20,32 +47,63 @@ public class Song {
     }
 
 
+    /**
+     * 
+     * 
+     * @return
+     */
     public String getName() {
         return this.name;
     }
 
 
+    /**
+     * 
+     * 
+     * @return
+     */
     public String getArtist() {
         return this.artist;
     }
 
 
+    /**
+     * 
+     * 
+     * @return
+     */
     public int getYear() {
         return this.year;
     }
 
 
+    /**
+     * 
+     * 
+     * @return
+     */
     public String getGenre() {
         return this.genre;
     }
 
 
+    /**
+     * 
+     * 
+     * @return
+     */
     public String toString() {
         return (getName() + " by: " + getArtist() + ", released: " + getYear()
             + " in genre " + getGenre());
     }
 
 
+    /**
+     * 
+     * 
+     * @param obj
+     * @return
+     */
     public boolean equals(Object obj) {
         if (obj == null) {
             return false;

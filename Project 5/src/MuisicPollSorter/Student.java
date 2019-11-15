@@ -1,7 +1,26 @@
+/**
+ * Virginia Tech Honor Code Pledge:
+ *
+ * As a Hokie, I will conduct myself with honor
+ * and integrity at all times.
+ * I will not lie, cheat, or steal, nor will I
+ * accept the actions of those who do.
+ * -- Allison Woods (awoods99)
+ * --
+ * --
+ */
 package MuisicPollSorter;
 
 import java.util.ArrayList;
 
+/**
+ * 
+ * 
+ * @author 
+ * @author 
+ * @author Allison Woods (awoods99)
+ * @version 11/15/2019
+ */
 public class Student {
 
     private int id;
@@ -11,7 +30,16 @@ public class Student {
     private String hobby;
     private ArrayList<String> responses;
 
-
+    /**
+     * 
+     * 
+     * @param studentID
+     * @param submitDate
+     * @param studentMajor
+     * @param studentRegion
+     * @param studentHobby
+     * @param studentResponses
+     */
     public Student(
         int studentID,
         String submitDate,
@@ -27,44 +55,77 @@ public class Student {
         responses = studentResponses;
     }
 
-
+    /**
+     * 
+     * 
+     * @return
+     */
     public int getID() {
         return this.id;
     }
 
-
+    /**
+     * 
+     * 
+     * @return
+     */
     public String getDate() {
         return this.date;
     }
 
-
+    /**
+     * 
+     * 
+     * @return
+     */
     public String getMajor() {
         return this.major;
     }
 
-
+    /**
+     * 
+     * 
+     * @return
+     */
     public String getRegion() {
         return this.region;
     }
 
-
+    /**
+     * 
+     * 
+     * @return
+     */
     public String getHobby() {
         return this.hobby;
     }
 
-
+    /**
+     * 
+     * 
+     * @return
+     */
     public ArrayList<String> getResponses() {
         return this.responses;
     }
 
-
+    /**
+     * 
+     * 
+     * @return
+     */
     public String toString() {
         return ("Student " + getID() + " submitted on: " + getDate()
             + " and is a " + getMajor() + " major from " + getRegion()
             + " region and whos hobby is " + getHobby());
     }
 
-
+    /**
+     * 
+     * 
+     * @param obj
+     * @return
+     */
     public boolean equals(Object obj) {
         if (obj == null) {
             return false;
