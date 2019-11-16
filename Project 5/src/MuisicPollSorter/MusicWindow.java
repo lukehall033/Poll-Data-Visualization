@@ -13,10 +13,17 @@ public class MusicWindow {
     private Window window;
     private Button previous;
     private Button next;
+    private Button sortArtistName;
+    private Button sortSongTitle;
+    private Button sortReleaseYear;
+    private Button sortGenre;
     
     public MusicWindow()
     {
         window = new Window();
-        previous = new Button();
+        previous = new Button("<- Prev");
+        next = new Button("Next ->");
+        window.addButton(previous, WindowSide.NORTH);
+        window.addButton(next, WindowSide.NORTH);
     }
 }
