@@ -16,6 +16,7 @@ public class MusicWindow {
     
     public MusicWindow()
     {
-        
+        window = new Window();
+        previous = new Button();
     }
 }
