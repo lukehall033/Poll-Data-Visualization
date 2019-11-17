@@ -77,8 +77,8 @@ public class MusicReader {
             String region = answers[3];
             String hobby = answers[4];
             
-            int yesCounter = 0;
-            int noCounter = 0;
+            //int yesCounter = 0;
+            //int noCounter = 0;
             if (!major.equals("") && !region.equals("") && !hobby.equals(""))
             {
                 //for (int i = 0; i < answers.length; i++)
