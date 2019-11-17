@@ -59,10 +59,11 @@ public class MusicReader {
         return arraySongs;
     }
     
-    private LinkedList<Student> readSurveyFile(String filename) throws FileNotFoundException
+    private LinkedList<Student> readSurveyFile(String filename) throws Exception
     {
         LinkedList<Student> student = new LinkedList<Student>();
         Scanner scan = new Scanner(new File(filename));
+        ArrayList<String> studentAnswers;
         
         scan.nextLine();
         while (scan.hasNextLine())
@@ -91,7 +92,7 @@ public class MusicReader {
                         //noCounter++; 
                     //}
                 
-                ArrayList<String> studentAnswers = new ArrayList<String>();
+                studentAnswers = new ArrayList<String>();
                 
                 
                 
@@ -112,7 +113,6 @@ public class MusicReader {
             
             //return yesCounter;
             //return noCounter;
-            return studentAnswers;
             Student newStudent = new Student(studentID, date, major, region, hobby, studentAnswers);
             student.add(newStudent);
         }
