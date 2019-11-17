@@ -79,7 +79,7 @@ public class MusicReader {
             
             int yesCounter = 0;
             int noCounter = 0;
-            if (major != null && region != null && hobby != null)
+            if (!major.equals("") && !region.equals("") && !hobby.equals(""))
             {
                 //for (int i = 0; i < answers.length; i++)
                 //{
@@ -92,8 +92,7 @@ public class MusicReader {
                         //noCounter++; 
                     //}
                 
-                studentAnswers = new ArrayList<String>();
-                
+                  studentAnswers = new ArrayList<String>();
                 
                 
 //                for (String s: answers)
@@ -114,18 +113,19 @@ public class MusicReader {
                         studentAnswers.add(answers[i]);
                     }
                 }
+            Student newStudent = new Student(studentID, date, major, region, hobby, studentAnswers);
+            student.add(newStudent);
             }
             
             
-            else
-            {
-                throw new Exception();
-            }
+//            else
+//            {
+//                throw new Exception();
+//            }
             
             //return yesCounter;
             //return noCounter;
-            Student newStudent = new Student(studentID, date, major, region, hobby, studentAnswers);
-            student.add(newStudent);
+
         }
         scan.close();
         return student;
@@ -139,7 +139,7 @@ public class MusicReader {
     {
         System.out.println(Arrays.toString(songs));
         System.out.println(students.get(111).getResponses());  
-        System.out.println(students.toString());    //for some reason this line only works when the previous line is commented out
+        System.out.println(students.toString());    
     }
 }
 
