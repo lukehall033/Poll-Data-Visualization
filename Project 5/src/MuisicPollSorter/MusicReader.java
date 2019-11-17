@@ -105,7 +105,14 @@ public class MusicReader {
 //                }
                 for (int i = 5; i < answers.length; i++)
                 {
-                    studentAnswers.add(answers[i]);
+                    if (answers[i].length() == 0)
+                    {
+                        studentAnswers.add("");
+                    }
+                    else
+                    {
+                        studentAnswers.add(answers[i]);
+                    }
                 }
             }
             
@@ -131,7 +138,7 @@ public class MusicReader {
     public void tempMethod()
     {
         System.out.println(Arrays.toString(songs));
-        System.out.println(students.get(1).getResponses());  
+        System.out.println(students.get(111).getResponses());  
         System.out.println(students.toString());    //for some reason this line only works when the previous line is commented out
     }
 }
