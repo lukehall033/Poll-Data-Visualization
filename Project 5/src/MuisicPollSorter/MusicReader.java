@@ -127,7 +127,8 @@ public class MusicReader {
     public void tempMethod()
     {
         System.out.println(Arrays.toString(songs));
-        System.out.println(students.toString());
+        System.out.println(students.get(1).getResponses());  
+        System.out.println(students.toString());    //for some reason this line only works when the previous line is commented out
     }
 }
 
