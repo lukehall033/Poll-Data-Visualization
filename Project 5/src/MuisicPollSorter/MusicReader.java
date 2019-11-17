@@ -16,10 +16,12 @@ import bsh.ParseException;
  */
 public class MusicReader {
     private Song[] songs;
+    private LinkedList<Student> students;
     
     public MusicReader(String musicFileName, String surveyFileName) throws Exception
     {
         songs = readSongFile(musicFileName);
+        students = readSurveyFile(surveyFileName);
     }
     
     private Song[] readSongFile(String filename) throws Exception
@@ -62,13 +64,14 @@ public class MusicReader {
         LinkedList<Student> student = new LinkedList<Student>();
         Scanner scan = new Scanner(new File(filename));
         
+        scan.nextLine();
         while (scan.hasNextLine())
         {
             String result = scan.nextLine();
             String[] answers = result.split(",");
             
             int studentID = Integer.valueOf(answers[0]);
-            int date = Integer.valueOf(answers[1]);
+            String date = (answers[1]);
             String major = answers[2];
             String region = answers[3];
             String hobby = answers[4];
@@ -124,6 +127,7 @@ public class MusicReader {
     public void tempMethod()
     {
         System.out.println(Arrays.toString(songs));
+        System.out.println(students.toString());
     }
 
 }
