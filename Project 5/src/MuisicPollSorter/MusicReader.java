@@ -96,14 +96,18 @@ public class MusicReader {
                 
                 
                 
-                for (String s: answers)
+//                for (String s: answers)
+//                {
+//                    studentAnswers.add(s + 4);
+//                    
+//                }
+//                
+//                }
+                for (int i = 5; i < answers.length; i++)
                 {
-                    studentAnswers.add(s + 4);
-                    
+                    studentAnswers.add(answers[i]);
                 }
-                
-                }
-                
+            }
             
             
             else
