@@ -87,6 +87,8 @@ public class MusicReader {
                 
                 ArrayList<String> studentAnswers = new ArrayList<String>();
                 
+                
+                
                 for (String s: answers)
                 {
                     studentAnswers.add(s + 4);

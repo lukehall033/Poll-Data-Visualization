@@ -36,7 +36,6 @@ public class LinkedList<T> implements Iterable<T> {
         private T data;
         private Node<T> next;
 
-
         /**
          * 
          * 
@@ -149,13 +148,17 @@ public class LinkedList<T> implements Iterable<T> {
      * @return
      */
     public T get(int index) {
-        int val = 1;
-        Node<T> current = head;
-        while (val != index) {
-            val++;
-            current = current.getNext();
+        if (!isEmpty())
+        {
+            int val = 1;
+            Node <T> current = head;
+            while (val != index) {
+                val++;
+                current = current.getNext();
+            }
+            return (current.getData());
         }
-        return (current.getData());
+        return null;
     }
 
 
@@ -165,7 +168,35 @@ public class LinkedList<T> implements Iterable<T> {
      * @return
      */
     public String toString() {
-        return null;
+//        if (isEmpty())
+//        {
+//            return "[]";
+//        }
+//        String result = "[";
+//        Node<T> current = head;
+//        while (current != null)
+//        {
+//            result += current.data.toString();
+//            current = current.next;
+//            if (current != null)
+//            {
+//                result += ", ";
+//            }
+//        }
+//        result += "]";
+//        return result;
+        String result = "[";
+        Iterator<T> listIterator = iterator();
+        while (listIterator.hasNext())
+        {
+            result += listIterator.next().toString();
+            if (listIterator.hasNext())
+            {
+                result += ", ";
+            }
+        }
+        result += "]";
+        return result;
     }
 
 
@@ -190,8 +221,7 @@ public class LinkedList<T> implements Iterable<T> {
      * @version 11/15/2019
      */
     private class LinkedListIterator<A> implements Iterator<T> {
-        private LinkedList<T> list;
-
+        private Node<T> current;
 
         /**
          * 
@@ -199,7 +229,7 @@ public class LinkedList<T> implements Iterable<T> {
          * @param Llist
          */
         public LinkedListIterator(LinkedList<T> Llist) {
-            list = Llist;
+            current = Llist.head;
         }
 
 
@@ -209,7 +239,7 @@ public class LinkedList<T> implements Iterable<T> {
          * @return
          */
         public boolean hasNext() {
-            return false;
+            return current != null;
         }
 
 
@@ -219,7 +249,9 @@ public class LinkedList<T> implements Iterable<T> {
          * @return
          */
         public T next() {
-            return null;
+            T data = current.getData();
+            current = current.getNext();
+            return data;
         }
     }
 }
