@@ -6,6 +6,7 @@ package MuisicPollSorter;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 import bsh.ParseException;
 
@@ -23,10 +24,12 @@ public class MusicReader {
     
     private Song[] readSongFile(String filename) throws Exception
     {
+        @SuppressWarnings("resource")
         Scanner scan = new Scanner(new File(filename));
-        Song[] arraySongs = new Song[200];
+        Song[] arraySongs = new Song[70];
         
         int counter = 0;
+        scan.nextLine();
         while (scan.hasNextLine())
         {
             String result = scan.nextLine();
@@ -36,21 +39,21 @@ public class MusicReader {
             String bandName = songList[1];
             int year = Integer.valueOf(songList[2]);
             String genre = songList[3];
-            
+             
             if (songList.length < 4)
             {
                 throw new ParseException();
             }
-            
+                
             Song newSong = new Song(songName, bandName, year, genre);
-            counter++;
             arraySongs[counter] = newSong;
-            
+            counter++; 
         }
         if (counter == 0)
         {
             throw new Exception();
         }
+        scan.close();
         return arraySongs;
     }
     
@@ -120,7 +123,7 @@ public class MusicReader {
     
     public void tempMethod()
     {
-        System.out.println(songs);
+        System.out.println(Arrays.toString(songs));
     }
 
 }
