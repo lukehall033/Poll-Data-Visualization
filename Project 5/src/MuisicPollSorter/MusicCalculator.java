@@ -10,4 +10,24 @@ public class MusicCalculator {
         studentList = students;
         songList = songs;
     }
+    
+    public LinkedList<Student> getStudents()
+    {
+        return studentList;
+    }
+    
+    public Song[] getSongs()
+    {
+        return songList;
+    }
+    
+    public void hobbySortedByGenre() //these are the two things
+    {                                //we have to print to pass
+                                     //the tests
+    }
+    
+    public void hobbySortedByTitle()
+    {
+        
+    }
 }
