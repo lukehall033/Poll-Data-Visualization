@@ -16,9 +16,9 @@ import bsh.ParseException;
 public class MusicReader {
     private Song[] songs;
     
-    public MusicReader(String musicFileName, String surveyFileName)
+    public MusicReader(String musicFileName, String surveyFileName) throws Exception
     {
-        
+        songs = readSongFile(musicFileName);
     }
     
     private Song[] readSongFile(String filename) throws Exception
@@ -117,5 +117,11 @@ public class MusicReader {
         
         
     }
+    
+    public void tempMethod()
+    {
+        System.out.println(songs);
+    }
 
 }
+
