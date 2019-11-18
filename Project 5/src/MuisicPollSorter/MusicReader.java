@@ -135,12 +135,5 @@ public class MusicReader {
         
         
     }
-    
-    public void tempMethod()
-    {
-        System.out.println(Arrays.toString(songs));
-        System.out.println(students.get(111).getResponses());  
-        System.out.println(students.toString());    
-    }
 }
 
