@@ -25,7 +25,7 @@ public class MusicCalculator {
     
     public void hobbySortedByGenre() //these are the two things we have to print out to pass the tests
     {              
-        Song[] sortedSongList = songList; 
+        Song[] sortedSongList = songList;
         Arrays.sort(sortedSongList);
         for (int i = 0; i < sortedSongList.length; i++)
         {
