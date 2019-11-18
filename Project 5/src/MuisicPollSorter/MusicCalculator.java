@@ -37,23 +37,61 @@ public class MusicCalculator {
             int likedArt = 0;
             int likedSports = 0;
             int likedMusic = 0;
+            int songIndex;
+            int temp = 0;
+            for (int k = 0; k < songList.length; k++)
+            {
+                if (songList[k].getName().equals(sortedSongList[i].getName()))
+                {
+                    temp = k;
+                }
+            }
+            songIndex = temp * 2;
             for (int j = 0; j < studentList.getSize(); j++)
             {
                 if (studentList.get(j + 1).getHobby().equals("reading"))
                 {
-                    //not done yet, need to tally everything up, but its almost done
+                    if (studentList.get(j + 1).getResponses().get(songIndex).equals("Yes"))
+                    {
+                        heardReading++;
+                    }
+                    if (studentList.get(j + 1).getResponses().get(songIndex + 1).equals("Yes"))
+                    {
+                        likedReading++;
+                    }
                 }
                 else if (studentList.get(j + 1).getHobby().equals("art"))
                 {
-                    //not done yet
+                    if (studentList.get(j + 1).getResponses().get(songIndex).equals("Yes"))
+                    {
+                        heardArt++;
+                    }
+                    if (studentList.get(j + 1).getResponses().get(songIndex + 1).equals("Yes"))
+                    {
+                        likedArt++;
+                    }
                 }
                 else if (studentList.get(j + 1).getHobby().equals("sports"))
                 {
-                    //not done yet
+                    if (studentList.get(j + 1).getResponses().get(songIndex).equals("Yes"))
+                    {
+                        heardSports++;
+                    }
+                    if (studentList.get(j + 1).getResponses().get(songIndex + 1).equals("Yes"))
+                    {
+                        likedSports++;
+                    }
                 }
                 else
                 {
-                    //not done yet
+                    if (studentList.get(j + 1).getResponses().get(songIndex).equals("Yes"))
+                    {
+                        heardMusic++;
+                    }
+                    if (studentList.get(j + 1).getResponses().get(songIndex + 1).equals("Yes"))
+                    {
+                        likedMusic++;
+                    }
                 }
             }
             System.out.println("Song Title: " + sortedSongList[i].getName());
