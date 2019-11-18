@@ -17,8 +17,8 @@ import student.TestCase;
 /**
  * 
  * 
- * @author 
- * @author 
+ * @author Luke Hall ()
+ * @author Samantha Kahn ()
  * @author Allison Woods (awoods99)
  * @version 11/15/2019
  */
