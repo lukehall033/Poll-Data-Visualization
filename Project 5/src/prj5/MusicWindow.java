@@ -134,5 +134,6 @@ public class MusicWindow {
     public void tempMethod()
     {
         calculator.hobbySortedByGenre();
+        calculator.hobbySortedByTitle();
     }
 }
