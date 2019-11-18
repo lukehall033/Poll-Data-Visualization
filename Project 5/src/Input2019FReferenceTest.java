@@ -30,12 +30,11 @@ public class Input2019FReferenceTest extends student.TestCase {
      *  in the middle and end of the row
      * Gathers the output from StdOut and compares it to
      * the expect output as stored in OutputTitleGenreHobby.txt
-     * @throws Exception 
      * 
      */
     @Hint("The main method is not working properly with input files " +
             "MusicSurveyData2018Intro.csv and SongList2018Intro.csv")
-    public void testMain09() throws Exception {
+    public void testMain09() throws java.io.IOException {
 
         Input.main(new String[] { "MusicSurveyData2018Intro.csv", 
                 "SongList2018Intro.csv" });
@@ -72,12 +71,11 @@ public class Input2019FReferenceTest extends student.TestCase {
      * using less songs and less responses that include missing data
      * Gathers the output from StdOut and compares it to
      * the expect output as stored in OutputTitleGenreHobby.txt
-     * @throws Exception 
      * 
      */
     @Hint("The main method is not working properly with input files " +
             "MusicSurveyData2018HolesLess.csv and SongList2018LessSong.csv")
-    public void testMain11() throws Exception {
+    public void testMain11() throws java.io.IOException {
 
         Input.main(new String[] { "MusicSurveyData2018HolesLess.csv", 
                 "SongList2018LessSongs.csv" });
@@ -112,12 +110,11 @@ public class Input2019FReferenceTest extends student.TestCase {
      * using half of the songs and 17 responses that include missing data
      * Gathers the output from StdOut and compares it to
      * the expect output as stored in OutputTitleGenreHobby.txt
-     * @throws Exception 
      * 
      */
     @Hint("The main method is not working properly with input files " +
             "MusicSurveyData2018.csv and SongList2018.csv")
-    public void testMain12() throws Exception {
+    public void testMain12() throws java.io.IOException {
 
         Input.main(new String[] { "MusicSurveyData2018HolesHalf.csv", 
                 "SongList2018HalfSongs.csv" });
