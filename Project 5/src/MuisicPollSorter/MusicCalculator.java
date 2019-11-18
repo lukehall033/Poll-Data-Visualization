@@ -27,7 +27,18 @@ public class MusicCalculator {
     {              
         Song[] sortedSongList = songList; 
         Arrays.sort(sortedSongList);
-        System.out.println(Arrays.toString(sortedSongList));
+        for (int i = 0; i < sortedSongList.length; i++)
+        {
+            System.out.println("Song Title: " + sortedSongList[i].getName());
+            System.out.println("Song Artist: " + sortedSongList[i].getArtist());
+            System.out.println("Song Genre: " + sortedSongList[i].getGenre());
+            System.out.println("Song Year: " + sortedSongList[i].getYear());
+            System.out.println("Heard");
+            System.out.println("reading:0 art:0 sports:0 music:0");
+            System.out.println("Likes");
+            System.out.println("reading:0 art:0 sports:0 music:0");
+            System.out.println();
+        }
     }
     
     public void hobbySortedByTitle()
