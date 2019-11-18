@@ -7,7 +7,7 @@ public class ProjectRunner {
         
         //MusicWindow window = new MusicWindow(); commenting this off for a bit to test musicReader
         MusicReader reader = new MusicReader("SongList2019F.csv", "MusicSurveyData2019F.csv");
-        reader.tempMethod();
+    
     }
 
 }

@@ -42,8 +42,11 @@ public class MusicWindow {
     private TextShape exampleText3;
     private Shape exampleShape;
     
-    public MusicWindow()
+    private MusicCalculator calculator;
+    
+    public MusicWindow(MusicCalculator calc)
     {
+        calculator = calc;
         window = new Window();
         window.setTitle("Project 5");
         previous = new Button("<- Prev");
@@ -52,6 +55,9 @@ public class MusicWindow {
         sortSongTitle = new Button("Sort by Song Title");
         sortReleaseYear = new Button("Sort by Release Year");
         sortGenre = new Button("Sort by Genre");
+        
+        sortGenre.onClick(this, "clickedSortByGenre");
+        
         representHobby = new Button("Represent Hobby");
         representMajor = new Button("Represent Major");
         representRegion = new Button("Represent Region");
@@ -117,5 +123,10 @@ public class MusicWindow {
         window.addShape(exampleText3);
         window.addShape(legend3);
         window.addShape(legend4);
+    }
+    
+    public void clickedSortByGenre(Button button)
+    {
+        calculator.hobbySortedByGenre();
     }
 }

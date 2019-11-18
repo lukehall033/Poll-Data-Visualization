@@ -19,7 +19,7 @@ package MuisicPollSorter;
  * @author Allison Woods (awoods99)
  * @version 11/15/2019
  */
-public class Song {
+public class Song implements Comparable<Song> {
 
     private String name;
     private String artist;
@@ -120,6 +120,12 @@ public class Song {
         else {
             return false;
         }
+    }
+    
+    @Override
+    public int compareTo(Song s)
+    {
+        return (this.getGenre().compareTo(s.getGenre()));
     }
 
 }

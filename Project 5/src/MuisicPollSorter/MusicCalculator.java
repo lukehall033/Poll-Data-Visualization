@@ -1,5 +1,7 @@
 package MuisicPollSorter;
 
+import java.util.Arrays;
+
 public class MusicCalculator {
 
     private LinkedList<Student> studentList;
@@ -21,9 +23,11 @@ public class MusicCalculator {
         return songList;
     }
     
-    public void hobbySortedByGenre() //these are the two things
-    {                                //we have to print to pass
-                                     //the tests
+    public void hobbySortedByGenre() //these are the two things we have to print out to pass the tests
+    {              
+        Song[] sortedSongList = songList; 
+        Arrays.sort(sortedSongList);
+        System.out.println(Arrays.toString(sortedSongList));
     }
     
     public void hobbySortedByTitle()

@@ -22,6 +22,7 @@ public class MusicReader {
     {
         songs = readSongFile(musicFileName);
         students = readSurveyFile(surveyFileName);
+        MusicWindow window = new MusicWindow(new MusicCalculator(students, songs));
     }
     
     private Song[] readSongFile(String filename) throws Exception
