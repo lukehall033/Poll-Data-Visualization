@@ -79,4 +79,11 @@ public class LinkedListTest extends TestCase {
             + "Southeastern region and whos hobby is video games]", 
             list.toString());
     }
+    
+    public void testAdd2()
+    {
+        list.add(null);
+        
+        assertEquals(2, list.getSize());
+    }
 }
