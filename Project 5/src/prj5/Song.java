@@ -17,15 +17,27 @@ import java.util.Comparator;
  * 
  * 
  * @author
- * @author
+ * @author Luke Hall (lukeh)
  * @author Allison Woods (awoods99)
  * @version 11/15/2019
  */
 public class Song implements Comparable<Song> {
 
+    /**
+     * f
+     */
     private String name;
+    /**
+     * f
+     */
     private String artist;
+    /**
+     * f
+     */
     private int year;
+    /**
+     * f
+     */
     private String genre;
 
 
@@ -125,11 +137,17 @@ public class Song implements Comparable<Song> {
     }
     
     @Override
+    /**
+     * f
+     */
     public int compareTo(Song s)
     {
         return (this.getGenre().compareTo(s.getGenre()));
     }
     
+    /**
+     * f
+     */
     public static Comparator<Song> CompareByTitle = new Comparator<Song>()
     {
         public int compare(Song s, Song s2)

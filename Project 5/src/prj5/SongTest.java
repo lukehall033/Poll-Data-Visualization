@@ -23,6 +23,9 @@ import student.TestCase;
  */
 public class SongTest extends TestCase {
 
+    /**
+     * f
+     **/
     private Song song;
 
 
@@ -35,7 +38,7 @@ public class SongTest extends TestCase {
 
 
     /**
-     * 
+     * f
      */
     public void testGetName() {
         assertEquals("Call Me", song.getName());
@@ -43,7 +46,7 @@ public class SongTest extends TestCase {
 
 
     /**
-     * 
+     * f
      */
     public void testGetArtist() {
         assertEquals("Blondie", song.getArtist());
@@ -51,7 +54,7 @@ public class SongTest extends TestCase {
 
 
     /**
-     * 
+     * f
      */
     public void testGetYear() {
         assertEquals(1980, song.getYear());
@@ -59,7 +62,7 @@ public class SongTest extends TestCase {
 
 
     /**
-     * 
+     * f
      */
     public void testGetGenre() {
         assertEquals("dance rock", song.getGenre());
@@ -67,7 +70,7 @@ public class SongTest extends TestCase {
 
 
     /**
-     * 
+     * f
      */
     public void testToString() {
         assertEquals("Call Me by: Blondie, released: 1980 in genre dance rock",
@@ -76,7 +79,7 @@ public class SongTest extends TestCase {
 
 
     /**
-     * 
+     * f
      */
     public void testEquals() {
         Object obj = new Object();
@@ -95,12 +98,18 @@ public class SongTest extends TestCase {
     }
 
 
+    /**
+     * f
+     */
     public void testEquals2() {
         Song song6 = new Song("Not Call Me", "NotBlondie", 1990, "not dance");
         assertFalse(song.equals(song6));
     }
 
 
+    /**
+     * f
+     */
     public void testCompareTo() {
         Song song6 = new Song("Not Call Me", "NotBlondie", 1990, "not dance");
         assertEquals(-10, song.compareTo(song6));

@@ -18,13 +18,19 @@ import student.TestCase;
  * 
  * 
  * @author 
- * @author 
+ * @author Luke Hall (lukeh)
  * @author Allison Woods (awoods99)
  * @version 11/15/2019
  */
 public class StudentTest extends TestCase {
 
+    /**
+     * f
+     */
     private Student student;
+    /**
+     * f
+     */
     private ArrayList<String> list = new ArrayList<String>();
 
     /**
@@ -36,49 +42,49 @@ public class StudentTest extends TestCase {
     }
 
     /**
-     * 
+     * f
      */
     public void testGetID() {
         assertEquals(100, student.getID());
     }
 
     /**
-     * 
+     * f
      */
     public void testGetDate() {
         assertEquals("11/11/2019 1:26", student.getDate());
     }
 
     /**
-     * 
+     * f
      */
     public void testGetMajor() {
         assertEquals("CS", student.getMajor());
     }
 
     /**
-     * 
+     * f
      */
     public void testGetRegion() {
         assertEquals("Southeastern", student.getRegion());
     }
 
     /**
-     * 
+     * f
      */
     public void testGetHobby() {
         assertEquals("video games", student.getHobby());
     }
 
     /**
-     * 
+     * f
      */
     public void testGetResponses() {
         assertEquals(list, student.getResponses());
     }
 
     /**
-     * 
+     * f
      */
     public void testToString() {
         assertEquals("Student 100 submitted on: 11/11/2019 "
@@ -87,7 +93,7 @@ public class StudentTest extends TestCase {
     }
 
     /**
-     * 
+     * f
      */
     public void testEquals() {
         Object obj = new Object();
