@@ -35,18 +35,18 @@ public class MusicCalculator {
         Arrays.sort(sortedSongList);
         for (int i = 0; i < sortedSongList.length; i++)
         {
-            int totalReading = 0;
-            int totalArt = 0;
-            int totalSports = 0;
-            int totalMusic = 0;
-            int heardReading = 0;
-            int heardArt = 0;
-            int heardSports = 0;
-            int heardMusic = 0;
-            int likedReading = 0;
-            int likedArt = 0;
-            int likedSports = 0;
-            int likedMusic = 0;
+            double totalReading = 0;
+            double totalArt = 0;
+            double totalSports = 0;
+            double totalMusic = 0;
+            double heardReading = 0;
+            double heardArt = 0;
+            double heardSports = 0;
+            double heardMusic = 0;
+            double likedReading = 0;
+            double likedArt = 0;
+            double likedSports = 0;
+            double likedMusic = 0;
             int songIndex;
             int temp = 0;
             for (int k = 0; k < songList.length; k++)
@@ -61,7 +61,10 @@ public class MusicCalculator {
             {
                 if (studentList.get(j + 1).getHobby().equals("reading"))
                 {
-                    totalReading++;
+                    if (!studentList.get(j + 1).getResponses().get(songIndex).equals(" "))
+                    {
+                        totalReading++;
+                    }
                     if (studentList.get(j + 1).getResponses().get(songIndex).equals("Yes"))
                     {
                         heardReading++;
@@ -76,7 +79,10 @@ public class MusicCalculator {
                 }
                 else if (studentList.get(j + 1).getHobby().equals("art"))
                 {
-                    totalArt++;
+                    if (!studentList.get(j + 1).getResponses().get(songIndex).equals(" "))
+                    {
+                        totalArt++;
+                    }
                     if (studentList.get(j + 1).getResponses().get(songIndex).equals("Yes"))
                     {
                         heardArt++;
@@ -91,7 +97,10 @@ public class MusicCalculator {
                 }
                 else if (studentList.get(j + 1).getHobby().equals("sports"))
                 {
-                    totalSports++;
+                    if (!studentList.get(j + 1).getResponses().get(songIndex).equals(" "))
+                    {
+                        totalSports++;
+                    }
                     if (studentList.get(j + 1).getResponses().get(songIndex).equals("Yes"))
                     {
                         heardSports++;
@@ -106,7 +115,10 @@ public class MusicCalculator {
                 }
                 else
                 {
-                    totalMusic++;
+                    if (!studentList.get(j + 1).getResponses().get(songIndex).equals(" "))
+                    {
+                        totalMusic++;
+                    }
                     if (studentList.get(j + 1).getResponses().get(songIndex).equals("Yes"))
                     {
                         heardMusic++;
@@ -141,9 +153,9 @@ public class MusicCalculator {
             System.out.println("Song Genre: " + sortedSongList[i].getGenre());
             System.out.println("Song Year: " + sortedSongList[i].getYear());
             System.out.println("Heard");
-            System.out.println("reading:" + heardReading/totalReading * 100 + " art:" + heardArt/totalArt * 100 + " sports:" + heardSports/totalSports * 100 + " music:" + heardMusic/totalMusic * 100);
+            System.out.println("reading:" + (int)(heardReading/totalReading * 100) + " art:" + (int)(heardArt/totalArt * 100) + " sports:" + (int)(heardSports/totalSports * 100) + " music:" + (int)(heardMusic/totalMusic * 100));
             System.out.println("Likes");
-            System.out.println("reading:" + likedReading/totalReading * 100 + " art:" + likedArt/totalArt * 100 + " sports:" + likedSports/totalSports * 100 + " music:" + likedMusic/totalMusic * 100);
+            System.out.println("reading:" + (int)(likedReading/totalReading * 100) + " art:" + (int)(likedArt/totalArt * 100) + " sports:" + (int)(likedSports/totalSports * 100) + " music:" + (int)(likedMusic/totalMusic * 100));
             System.out.println();
         }
     }
@@ -158,18 +170,18 @@ public class MusicCalculator {
         Arrays.sort(sortedSongList, Song.CompareByTitle);
         for (int i = 0; i < sortedSongList.length; i++)
         {
-            int totalReading = 0;
-            int totalArt = 0;
-            int totalSports = 0;
-            int totalMusic = 0;
-            int heardReading = 0;
-            int heardArt = 0;
-            int heardSports = 0;
-            int heardMusic = 0;
-            int likedReading = 0;
-            int likedArt = 0;
-            int likedSports = 0;
-            int likedMusic = 0;
+            double totalReading = 0;
+            double totalArt = 0;
+            double totalSports = 0;
+            double totalMusic = 0;
+            double heardReading = 0;
+            double heardArt = 0;
+            double heardSports = 0;
+            double heardMusic = 0;
+            double likedReading = 0;
+            double likedArt = 0;
+            double likedSports = 0;
+            double likedMusic = 0;
             int songIndex;
             int temp = 0;
             for (int k = 0; k < songList.length; k++)
@@ -184,7 +196,10 @@ public class MusicCalculator {
             {
                 if (studentList.get(j + 1).getHobby().equals("reading"))
                 {
-                    totalReading++;
+                    if (!studentList.get(j + 1).getResponses().get(songIndex).equals(" "))
+                    {
+                        totalReading++;
+                    }
                     if (studentList.get(j + 1).getResponses().get(songIndex).equals("Yes"))
                     {
                         heardReading++;
@@ -199,7 +214,10 @@ public class MusicCalculator {
                 }
                 else if (studentList.get(j + 1).getHobby().equals("art"))
                 {
-                    totalArt++;
+                    if (!studentList.get(j + 1).getResponses().get(songIndex).equals(" "))
+                    {
+                        totalArt++;
+                    }
                     if (studentList.get(j + 1).getResponses().get(songIndex).equals("Yes"))
                     {
                         heardArt++;
@@ -214,7 +232,10 @@ public class MusicCalculator {
                 }
                 else if (studentList.get(j + 1).getHobby().equals("sports"))
                 {
-                    totalSports++;
+                    if (!studentList.get(j + 1).getResponses().get(songIndex).equals(" "))
+                    {
+                        totalSports++;
+                    }
                     if (studentList.get(j + 1).getResponses().get(songIndex).equals("Yes"))
                     {
                         heardSports++;
@@ -229,7 +250,10 @@ public class MusicCalculator {
                 }
                 else
                 {
-                    totalMusic++;
+                    if (!studentList.get(j + 1).getResponses().get(songIndex).equals(" "))
+                    {
+                        totalMusic++;
+                    }
                     if (studentList.get(j + 1).getResponses().get(songIndex).equals("Yes"))
                     {
                         heardMusic++;
@@ -264,9 +288,9 @@ public class MusicCalculator {
             System.out.println("Song Genre: " + sortedSongList[i].getGenre());
             System.out.println("Song Year: " + sortedSongList[i].getYear());
             System.out.println("Heard");
-            System.out.println("reading:" + heardReading/totalReading * 100 + " art:" + heardArt/totalArt * 100 + " sports:" + heardSports/totalSports * 100 + " music:" + heardMusic/totalMusic * 100);
+            System.out.println("reading:" + (int)(heardReading/totalReading * 100) + " art:" + (int)(heardArt/totalArt * 100) + " sports:" + (int)(heardSports/totalSports * 100) + " music:" + (int)(heardMusic/totalMusic * 100));
             System.out.println("Likes");
-            System.out.println("reading:" + likedReading/totalReading * 100 + " art:" + likedArt/totalArt * 100 + " sports:" + likedSports/totalSports * 100 + " music:" + likedMusic/totalMusic * 100);
+            System.out.println("reading:" + (int)(likedReading/totalReading * 100) + " art:" + (int)(likedArt/totalArt * 100) + " sports:" + (int)(likedSports/totalSports * 100) + " music:" + (int)(likedMusic/totalMusic * 100));
             System.out.println();
         }
     }
