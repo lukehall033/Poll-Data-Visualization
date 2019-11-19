@@ -61,7 +61,10 @@ public class MusicCalculator {
             {
                 if (studentList.get(j + 1).getHobby().equals("reading"))
                 {
-                    totalReading++;
+                    if (!studentList.get(j + 1).getResponses().get(songIndex).equals(" "))
+                    {
+                        totalReading++;
+                    }
                     if (studentList.get(j + 1).getResponses().get(songIndex).equals("Yes"))
                     {
                         heardReading++;
@@ -76,7 +79,10 @@ public class MusicCalculator {
                 }
                 else if (studentList.get(j + 1).getHobby().equals("art"))
                 {
-                    totalArt++;
+                    if (!studentList.get(j + 1).getResponses().get(songIndex).equals(" "))
+                    {
+                        totalArt++;
+                    }
                     if (studentList.get(j + 1).getResponses().get(songIndex).equals("Yes"))
                     {
                         heardArt++;
@@ -91,7 +97,10 @@ public class MusicCalculator {
                 }
                 else if (studentList.get(j + 1).getHobby().equals("sports"))
                 {
-                    totalSports++;
+                    if (!studentList.get(j + 1).getResponses().get(songIndex).equals(" "))
+                    {
+                        totalSports++;
+                    }
                     if (studentList.get(j + 1).getResponses().get(songIndex).equals("Yes"))
                     {
                         heardSports++;
@@ -106,7 +115,10 @@ public class MusicCalculator {
                 }
                 else
                 {
-                    totalMusic++;
+                    if (!studentList.get(j + 1).getResponses().get(songIndex).equals(" "))
+                    {
+                        totalMusic++;
+                    }
                     if (studentList.get(j + 1).getResponses().get(songIndex).equals("Yes"))
                     {
                         heardMusic++;
@@ -184,7 +196,10 @@ public class MusicCalculator {
             {
                 if (studentList.get(j + 1).getHobby().equals("reading"))
                 {
-                    totalReading++;
+                    if (!studentList.get(j + 1).getResponses().get(songIndex).equals(" "))
+                    {
+                        totalReading++;
+                    }
                     if (studentList.get(j + 1).getResponses().get(songIndex).equals("Yes"))
                     {
                         heardReading++;
@@ -199,7 +214,10 @@ public class MusicCalculator {
                 }
                 else if (studentList.get(j + 1).getHobby().equals("art"))
                 {
-                    totalArt++;
+                    if (!studentList.get(j + 1).getResponses().get(songIndex).equals(" "))
+                    {
+                        totalArt++;
+                    }
                     if (studentList.get(j + 1).getResponses().get(songIndex).equals("Yes"))
                     {
                         heardArt++;
@@ -214,7 +232,10 @@ public class MusicCalculator {
                 }
                 else if (studentList.get(j + 1).getHobby().equals("sports"))
                 {
-                    totalSports++;
+                    if (!studentList.get(j + 1).getResponses().get(songIndex).equals(" "))
+                    {
+                        totalSports++;
+                    }
                     if (studentList.get(j + 1).getResponses().get(songIndex).equals("Yes"))
                     {
                         heardSports++;
@@ -229,7 +250,10 @@ public class MusicCalculator {
                 }
                 else
                 {
-                    totalMusic++;
+                    if (!studentList.get(j + 1).getResponses().get(songIndex).equals(" "))
+                    {
+                        totalMusic++;
+                    }
                     if (studentList.get(j + 1).getResponses().get(songIndex).equals("Yes"))
                     {
                         heardMusic++;

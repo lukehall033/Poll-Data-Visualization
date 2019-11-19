@@ -2,7 +2,6 @@ package prj5;
 
 public class Input {
 
-    //temporary
     public static void main(String[] args) throws Exception {
         
         //@SuppressWarnings("unused")
