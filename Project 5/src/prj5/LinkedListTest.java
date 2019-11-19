@@ -2,14 +2,37 @@ package prj5;
 import java.util.ArrayList;
 import student.TestCase;
 
+/**
+ * f
+ * @author lukeh
+ * @version 11.28.2019
+ */
 public class LinkedListTest extends TestCase {
 
+    /**
+     * f
+     */
     private LinkedList<Student> list;
+    /**
+     * f
+     */
     private LinkedList<Student> list2;
+    /**
+     * f
+     */
     private Student student1;
+    /**
+     * f
+     */
     private Student student2;
+    /**
+     * f
+     */
     private Student student3;
     
+    /**
+     * f
+     */
     public void setUp()
     {
         list = new LinkedList<Student>();
@@ -21,18 +44,27 @@ public class LinkedListTest extends TestCase {
         list.add(student2);
     }
     
+    /**
+     * f
+     */
     public void testGetSize()
     {
         assertEquals(0, list2.getSize());
         assertEquals(2, list.getSize());
     }
     
+    /**
+     * f
+     */
     public void testIsEmpty()
     {
         assertTrue(list2.isEmpty());
         assertFalse(list.isEmpty());
     }
     
+    /**
+     * f
+     */
     public void testClear()
     {
         assertFalse(list.isEmpty());
@@ -40,6 +72,9 @@ public class LinkedListTest extends TestCase {
         assertTrue(list.isEmpty());
     }
     
+    /**
+     * f
+     */
     public void testAdd()
     {
         assertEquals(2, list.getSize());
@@ -49,6 +84,9 @@ public class LinkedListTest extends TestCase {
         assertEquals(1, list2.getSize());
     }
     
+    /**
+     * f
+     */
     public void testRemove()
     {
         list2.remove();
@@ -60,6 +98,9 @@ public class LinkedListTest extends TestCase {
         assertTrue(list.isEmpty());
     }
     
+    /**
+     * f
+     */
     public void testGet()
     {
         assertNull(list2.get(1));
@@ -69,6 +110,9 @@ public class LinkedListTest extends TestCase {
         assertEquals(student3, list.get(1));
     }
     
+    /**
+     * f
+     */
     public void testToString()
     {
         assertEquals("[]", list2.toString());
@@ -80,6 +124,9 @@ public class LinkedListTest extends TestCase {
             list.toString());
     }
     
+    /**
+     * f
+     */
     public void testAdd2()
     {
         list.add(null);

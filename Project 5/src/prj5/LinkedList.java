@@ -28,7 +28,7 @@ public class LinkedList<T> implements Iterable<T> {
      * Add class description here.
      * 
      * @author
-     * @author
+     * @author Luke Hall (lukeh)
      * @author Allison Woods (awoods99)
      * @version 11/15/2019
      */
@@ -67,7 +67,13 @@ public class LinkedList<T> implements Iterable<T> {
         }
     }
 
+    /**
+     * f
+     */
     private int size;
+    /**
+     * f
+     */
     private Node<T> head;
 
 
@@ -216,11 +222,14 @@ public class LinkedList<T> implements Iterable<T> {
      * Add class description here.
      * 
      * @author
-     * @author
+     * @author Luke Hall (lukeh)
      * @author Allison Woods (awoods99)
      * @version 11/15/2019
      */
     private class LinkedListIterator<A> implements Iterator<T> {
+        /**
+         * f
+         */
         private Node<T> current;
 
         /**
