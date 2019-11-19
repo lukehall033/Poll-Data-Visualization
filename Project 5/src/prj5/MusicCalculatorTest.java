@@ -19,18 +19,28 @@ public class MusicCalculatorTest extends TestCase {
     private Song song1;
     private Song song2;
     private Song song3;
+    private Student stud3;
+    private ArrayList<String> responses;
 
 
     public void setUp() {
         songs = new Song[3];
         students = new LinkedList<Student>();
+        responses = new ArrayList<String>();
+        responses.add("Yes");
+        responses.add("No");
+        responses.add("Yes");
+        responses.add("Yes");
         mc = new MusicCalculator(students, songs);
 
         stud1 = new Student(12, "12/10/19", "CS", "Southeast", "reading",
-            new ArrayList<String>());
+            responses);
         
         stud2 = new Student(13, "12/11/19", "Math CMDA", "Southeast", "reading",
-            new ArrayList<String>());
+            responses);
+        
+        stud3 = new Student(13, "12/12/19", "CS", "Northeast", "reading",
+            responses);
         
         students.add(stud1);
         students.add(stud2);
@@ -42,6 +52,9 @@ public class MusicCalculatorTest extends TestCase {
         songs[0] = song1;
         songs[1] = song2;
         songs[2] = song3;
+        
+        
+            
         
     }
     
