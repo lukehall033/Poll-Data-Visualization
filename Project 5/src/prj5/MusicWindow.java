@@ -1,4 +1,5 @@
 package prj5;
+
 import java.awt.Color;
 import java.util.ArrayList;
 import CS2114.Button;
@@ -138,13 +139,14 @@ public class MusicWindow {
      * f
      */
     private MusicCalculator calculator;
-    
+
+
     /**
      * f
+     * 
      * @param calc
      */
-    public MusicWindow(MusicCalculator calc)
-    {
+    public MusicWindow(MusicCalculator calc) {
         calculator = calc;
         window = new Window();
         window.setTitle("Project 5");
@@ -154,10 +156,10 @@ public class MusicWindow {
         sortSongTitle = new Button("Sort by Song Title");
         sortReleaseYear = new Button("Sort by Release Year");
         sortGenre = new Button("Sort by Genre");
-        
+
         sortGenre.onClick(this, "clickedSortByGenre");
         tempMethod();
-        
+
         representHobby = new Button("Represent Hobby");
         representMajor = new Button("Represent Major");
         representRegion = new Button("Represent Region");
@@ -192,7 +194,7 @@ public class MusicWindow {
         exampleText3.setBackgroundColor(Color.WHITE);
         legend3 = new Shape(608, 115, 114, 2, Color.BLACK);
         legend4 = new Shape(608, 283, 114, 2, Color.BLACK);
-        
+
         window.addButton(previous, WindowSide.NORTH);
         window.addButton(sortArtistName, WindowSide.NORTH);
         window.addButton(sortSongTitle, WindowSide.NORTH);
@@ -224,21 +226,22 @@ public class MusicWindow {
         window.addShape(legend3);
         window.addShape(legend4);
     }
-    
+
+
     /**
      * f
+     * 
      * @param button
      */
-    public void clickedSortByGenre(Button button)
-    {
+    public void clickedSortByGenre(Button button) {
         calculator.hobbySortedByGenre();
     }
-    
+
+
     /**
      * f
      */
-    public void tempMethod()
-    {
+    public void tempMethod() {
         calculator.hobbySortedByGenre();
         calculator.hobbySortedByTitle();
     }

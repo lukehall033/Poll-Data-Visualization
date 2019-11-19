@@ -16,7 +16,7 @@ import java.util.ArrayList;
 /**
  * 
  * 
- * @author 
+ * @author
  * @author Luke Hall (lukeh)
  * @author Allison Woods (awoods99)
  * @version 11/15/2019
@@ -48,6 +48,7 @@ public class Student {
      */
     private ArrayList<String> responses;
 
+
     /**
      * 
      * 
@@ -73,6 +74,7 @@ public class Student {
         responses = studentResponses;
     }
 
+
     /**
      * 
      * 
@@ -81,6 +83,7 @@ public class Student {
     public int getID() {
         return this.id;
     }
+
 
     /**
      * 
@@ -91,6 +94,7 @@ public class Student {
         return this.date;
     }
 
+
     /**
      * 
      * 
@@ -99,6 +103,7 @@ public class Student {
     public String getMajor() {
         return this.major;
     }
+
 
     /**
      * 
@@ -109,6 +114,7 @@ public class Student {
         return this.region;
     }
 
+
     /**
      * 
      * 
@@ -118,6 +124,7 @@ public class Student {
         return this.hobby;
     }
 
+
     /**
      * 
      * 
@@ -126,6 +133,7 @@ public class Student {
     public ArrayList<String> getResponses() {
         return this.responses;
     }
+
 
     /**
      * 
@@ -137,6 +145,7 @@ public class Student {
             + " and is a " + getMajor() + " major from " + getRegion()
             + " region and whos hobby is " + getHobby());
     }
+
 
     /**
      * 

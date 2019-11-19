@@ -36,6 +36,7 @@ public class LinkedList<T> implements Iterable<T> {
         private T data;
         private Node<T> next;
 
+
         /**
          * 
          * 
@@ -154,10 +155,9 @@ public class LinkedList<T> implements Iterable<T> {
      * @return
      */
     public T get(int index) {
-        if (!isEmpty())
-        {
+        if (!isEmpty()) {
             int val = 1;
-            Node <T> current = head;
+            Node<T> current = head;
             while (val != index) {
                 val++;
                 current = current.getNext();
@@ -174,30 +174,28 @@ public class LinkedList<T> implements Iterable<T> {
      * @return
      */
     public String toString() {
-//        if (isEmpty())
-//        {
-//            return "[]";
-//        }
-//        String result = "[";
-//        Node<T> current = head;
-//        while (current != null)
-//        {
-//            result += current.data.toString();
-//            current = current.next;
-//            if (current != null)
-//            {
-//                result += ", ";
-//            }
-//        }
-//        result += "]";
-//        return result;
+// if (isEmpty())
+// {
+// return "[]";
+// }
+// String result = "[";
+// Node<T> current = head;
+// while (current != null)
+// {
+// result += current.data.toString();
+// current = current.next;
+// if (current != null)
+// {
+// result += ", ";
+// }
+// }
+// result += "]";
+// return result;
         String result = "[";
         Iterator<T> listIterator = iterator();
-        while (listIterator.hasNext())
-        {
+        while (listIterator.hasNext()) {
             result += listIterator.next().toString();
-            if (listIterator.hasNext())
-            {
+            if (listIterator.hasNext()) {
                 result += ", ";
             }
         }
@@ -231,6 +229,7 @@ public class LinkedList<T> implements Iterable<T> {
          * f
          */
         private Node<T> current;
+
 
         /**
          * 

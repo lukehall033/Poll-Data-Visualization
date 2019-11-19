@@ -135,25 +135,22 @@ public class Song implements Comparable<Song> {
             return false;
         }
     }
-    
+
+
     @Override
     /**
      * f
      */
-    public int compareTo(Song s)
-    {
+    public int compareTo(Song s) {
         return (this.getGenre().compareTo(s.getGenre()));
     }
-    
+
     /**
      * f
      */
-    public static Comparator<Song> CompareByTitle = new Comparator<Song>()
-    {
-        public int compare(Song s, Song s2)
-        {
+    public static Comparator<Song> CompareByTitle = new Comparator<Song>() {
+        public int compare(Song s, Song s2) {
             return (s.getName().compareTo(s2.getName()));
         }
     };
 }
-
