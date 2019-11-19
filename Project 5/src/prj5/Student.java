@@ -17,17 +17,35 @@ import java.util.ArrayList;
  * 
  * 
  * @author 
- * @author 
+ * @author Luke Hall (lukeh)
  * @author Allison Woods (awoods99)
  * @version 11/15/2019
  */
 public class Student {
 
+    /**
+     * f
+     */
     private int id;
+    /**
+     * f
+     */
     private String date;
+    /**
+     * f
+     */
     private String major;
+    /**
+     * f
+     */
     private String region;
+    /**
+     * f
+     */
     private String hobby;
+    /**
+     * f
+     */
     private ArrayList<String> responses;
 
     /**

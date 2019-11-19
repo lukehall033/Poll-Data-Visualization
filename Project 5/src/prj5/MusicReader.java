@@ -12,12 +12,24 @@ import bsh.ParseException;
 
 /**
  * @author samkahn1
- *
+ * @version 11.18.2019
  */
 public class MusicReader {
+    /**
+     * f
+     */
     private Song[] songs;
+    /**
+     * f
+     */
     private LinkedList<Student> students;
     
+    /**
+     * f
+     * @param musicFileName
+     * @param surveyFileName
+     * @throws Exception
+     */
     public MusicReader(String musicFileName, String surveyFileName) throws Exception
     {
         songs = readSongFile(musicFileName);
@@ -25,6 +37,12 @@ public class MusicReader {
         MusicWindow window = new MusicWindow(new MusicCalculator(students, songs));
     }
     
+    /**
+     * f
+     * @param filename
+     * @return
+     * @throws Exception
+     */
     private Song[] readSongFile(String filename) throws Exception
     {
         @SuppressWarnings("resource")
@@ -67,6 +85,12 @@ public class MusicReader {
         return arraySongs;
     }
     
+    /**
+     * f
+     * @param filename
+     * @return
+     * @throws Exception
+     */
     private LinkedList<Student> readSurveyFile(String filename) throws Exception
     {
         LinkedList<Student> student = new LinkedList<Student>();

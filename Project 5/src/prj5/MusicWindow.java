@@ -10,40 +10,139 @@ import CS2114.WindowSide;
 
 public class MusicWindow {
 
+    /**
+     * f
+     */
     private Window window;
+    /**
+     * f
+     */
     private Button previous;
+    /**
+     * f
+     */
     private Button next;
+    /**
+     * f
+     */
     private Button sortArtistName;
+    /**
+     * f
+     */
     private Button sortSongTitle;
+    /**
+     * f
+     */
     private Button sortReleaseYear;
+    /**
+     * f
+     */
     private Button sortGenre;
+    /**
+     * f
+     */
     private Button representHobby;
+    /**
+     * f
+     */
     private Button representMajor;
+    /**
+     * f
+     */
     private Button representRegion;
+    /**
+     * f
+     */
     private Button quit;
+    /**
+     * f
+     */
     private Shape glyph;
+    /**
+     * f
+     */
     private Shape bar1;
+    /**
+     * f
+     */
     private Shape bar2;
+    /**
+     * f
+     */
     private Shape bar3;
+    /**
+     * f
+     */
     private Shape bar4;
+    /**
+     * f
+     */
     private TextShape songText;
+    /**
+     * f
+     */
     private TextShape songText2;
+    /**
+     * f
+     */
     private Shape legend1;
+    /**
+     * f
+     */
     private Shape legend2;
+    /**
+     * f
+     */
     private Shape legend3;
+    /**
+     * f
+     */
     private Shape legend4;
+    /**
+     * f
+     */
     private TextShape legendTitle;
+    /**
+     * f
+     */
     private TextShape option1;
+    /**
+     * f
+     */
     private TextShape option2;
+    /**
+     * f
+     */
     private TextShape option3;
+    /**
+     * f
+     */
     private TextShape option4;
+    /**
+     * f
+     */
     private TextShape exampleText;
+    /**
+     * f
+     */
     private TextShape exampleText2;
+    /**
+     * f
+     */
     private TextShape exampleText3;
+    /**
+     * f
+     */
     private Shape exampleShape;
-    
+    /**
+     * f
+     */
     private MusicCalculator calculator;
     
+    /**
+     * f
+     * @param calc
+     */
     public MusicWindow(MusicCalculator calc)
     {
         calculator = calc;
@@ -126,11 +225,18 @@ public class MusicWindow {
         window.addShape(legend4);
     }
     
+    /**
+     * f
+     * @param button
+     */
     public void clickedSortByGenre(Button button)
     {
         calculator.hobbySortedByGenre();
     }
     
+    /**
+     * f
+     */
     public void tempMethod()
     {
         calculator.hobbySortedByGenre();
