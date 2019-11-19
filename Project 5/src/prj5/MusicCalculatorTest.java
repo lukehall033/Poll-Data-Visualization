@@ -44,6 +44,7 @@ public class MusicCalculatorTest extends TestCase {
         
         students.add(stud1);
         students.add(stud2);
+        students.add(stud3);
         
         song1 = new Song("Hello", "Adele", 1980, "rock");
         song2 = new Song("Baby", "JB", 1980, "pop");
@@ -67,11 +68,4 @@ public class MusicCalculatorTest extends TestCase {
     {
         assertEquals(students, mc.getStudents());
     }
-    
-    public void testHobbySortedByGenre()
-    {
-        mc.hobbySortedByGenre();
-        assertEquals(song3, songs[1]);
-    }
-
 }
