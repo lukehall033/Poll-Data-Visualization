@@ -38,7 +38,7 @@ public class Input2019FReferenceTest extends student.TestCase {
     public void testMain09() throws Exception {
 
         Input.main(new String[] { "MusicSurveyData2018Intro.csv", 
-                "SongList2018Intro.csv" });
+            "SongList2018Intro.csv" });
 
         fileName = "Output09_2018.txt";
 
@@ -80,7 +80,7 @@ public class Input2019FReferenceTest extends student.TestCase {
     public void testMain11() throws Exception {
 
         Input.main(new String[] { "MusicSurveyData2018HolesLess.csv", 
-                "SongList2018LessSongs.csv" });
+            "SongList2018LessSongs.csv" });
 
         fileName = "Output11_2018.txt";
 
@@ -120,7 +120,7 @@ public class Input2019FReferenceTest extends student.TestCase {
     public void testMain12() throws Exception {
 
         Input.main(new String[] { "MusicSurveyData2018HolesHalf.csv", 
-                "SongList2018HalfSongs.csv" });
+            "SongList2018HalfSongs.csv" });
 
         fileName = "Output12_2018.txt";
 
