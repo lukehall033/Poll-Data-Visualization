@@ -1,7 +1,7 @@
 /**
  * 
  */
-package MuisicPollSorter;
+package prj5;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -29,7 +29,8 @@ public class MusicReader {
     {
         @SuppressWarnings("resource")
         Scanner scan = new Scanner(new File(filename));
-        Song[] arraySongs = new Song[70];
+        //Song[] arraySongs = new Song[70];
+        ArrayList<Song> list = new ArrayList<Song>();
         
         int counter = 0;
         scan.nextLine();
@@ -49,7 +50,8 @@ public class MusicReader {
             }
                 
             Song newSong = new Song(songName, bandName, year, genre);
-            arraySongs[counter] = newSong;
+            //arraySongs[counter] = newSong;
+            list.add(newSong);
             counter++; 
         }
         if (counter == 0)
@@ -57,6 +59,11 @@ public class MusicReader {
             throw new Exception();
         }
         scan.close();
+        Song[] arraySongs = new Song[counter];
+        for (int i = 0; i < list.size(); i++)
+        {
+            arraySongs[i] = list.get(i);
+        }
         return arraySongs;
     }
     
@@ -135,5 +142,6 @@ public class MusicReader {
         
         
     }
+    
 }
 

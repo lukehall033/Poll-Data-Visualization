@@ -9,7 +9,9 @@
  * --
  * --
  */
-package MuisicPollSorter;
+package prj5;
+
+import java.util.Comparator;
 
 /**
  * 
@@ -127,5 +129,13 @@ public class Song implements Comparable<Song> {
     {
         return (this.getGenre().compareTo(s.getGenre()));
     }
-
+    
+    public static Comparator<Song> CompareByTitle = new Comparator<Song>()
+    {
+        public int compare(Song s, Song s2)
+        {
+            return (s.getName().compareTo(s2.getName()));
+        }
+    };
 }
+

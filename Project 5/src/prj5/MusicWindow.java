@@ -1,4 +1,4 @@
-package MuisicPollSorter;
+package prj5;
 import java.awt.Color;
 import java.util.ArrayList;
 import CS2114.Button;
@@ -57,6 +57,7 @@ public class MusicWindow {
         sortGenre = new Button("Sort by Genre");
         
         sortGenre.onClick(this, "clickedSortByGenre");
+        tempMethod();
         
         representHobby = new Button("Represent Hobby");
         representMajor = new Button("Represent Major");
@@ -128,5 +129,11 @@ public class MusicWindow {
     public void clickedSortByGenre(Button button)
     {
         calculator.hobbySortedByGenre();
+    }
+    
+    public void tempMethod()
+    {
+        calculator.hobbySortedByGenre();
+        calculator.hobbySortedByTitle();
     }
 }
