@@ -95,4 +95,15 @@ public class SongTest extends TestCase {
     }
 
 
+    public void testEquals2() {
+        Song song6 = new Song("Not Call Me", "NotBlondie", 1990, "not dance");
+        assertFalse(song.equals(song6));
+    }
+
+
+    public void testCompareTo() {
+        Song song6 = new Song("Not Call Me", "NotBlondie", 1990, "not dance");
+        assertEquals(-10, song.compareTo(song6));
+    }
+
 }
