@@ -3,27 +3,54 @@ package prj5;
 import java.util.Arrays;
 import java.util.Collections;
 
+/**
+ * f
+ * @author lukeh
+ * @version 11.18.2019
+ */
 public class MusicCalculator {
 
+    /**
+     * f
+     */
     private LinkedList<Student> studentList;
+    /**
+     * f
+     */
     private Song[] songList;
     
+    /**
+     * f
+     * @param students
+     * @param songs
+     */
     public MusicCalculator(LinkedList<Student> students, Song[] songs)
     {
         studentList = students;
         songList = songs;
     }
     
+    /**
+     * f
+     * @return
+     */
     public LinkedList<Student> getStudents()
     {
         return studentList;
     }
     
+    /**
+     * f
+     * @return
+     */
     public Song[] getSongs()
     {
         return songList;
     }
     
+    /**
+     * f
+     */
     public void hobbySortedByGenre() //these are the two things we have to print out to pass the tests
     {              
         //Song[] sortedSongList = songList;
@@ -160,6 +187,9 @@ public class MusicCalculator {
         }
     }
     
+    /**
+     * f
+     */
     public void hobbySortedByTitle()
     {
         Song[] sortedSongList = new Song[songList.length];
