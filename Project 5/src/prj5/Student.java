@@ -16,7 +16,7 @@ import java.util.ArrayList;
 /**
  * 
  * 
- * @author 
+ * 
  * @author Luke Hall (lukeh)
  * @author Allison Woods (awoods99)
  * @version 11/15/2019
@@ -51,12 +51,12 @@ public class Student {
     /**
      * 
      * 
-     * @param studentID
-     * @param submitDate
-     * @param studentMajor
-     * @param studentRegion
-     * @param studentHobby
-     * @param studentResponses
+     * @param int studentID
+     * @param String submitDate
+     * @param String studentMajor
+     * @param String studentRegion
+     * @param String studentHobby
+     * @param ArrayList<String> studentResponses
      */
     public Student(
         int studentID,
@@ -76,7 +76,7 @@ public class Student {
     /**
      * 
      * 
-     * @return
+     * @return int id
      */
     public int getID() {
         return this.id;
@@ -85,7 +85,7 @@ public class Student {
     /**
      * 
      * 
-     * @return
+     * @return String date
      */
     public String getDate() {
         return this.date;
@@ -94,7 +94,7 @@ public class Student {
     /**
      * 
      * 
-     * @return
+     * @return String major
      */
     public String getMajor() {
         return this.major;
@@ -103,7 +103,7 @@ public class Student {
     /**
      * 
      * 
-     * @return
+     * @return String region
      */
     public String getRegion() {
         return this.region;
@@ -112,7 +112,7 @@ public class Student {
     /**
      * 
      * 
-     * @return
+     * @return String hobby
      */
     public String getHobby() {
         return this.hobby;
@@ -121,7 +121,7 @@ public class Student {
     /**
      * 
      * 
-     * @return
+     * @return ArrayList<String> responses
      */
     public ArrayList<String> getResponses() {
         return this.responses;
@@ -130,7 +130,7 @@ public class Student {
     /**
      * 
      * 
-     * @return
+     * @return String toString
      */
     public String toString() {
         return ("Student " + getID() + " submitted on: " + getDate()
@@ -141,8 +141,8 @@ public class Student {
     /**
      * 
      * 
-     * @param obj
-     * @return
+     * @param Object obj
+     * @return boolean bool
      */
     public boolean equals(Object obj) {
         if (obj == null) {

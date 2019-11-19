@@ -218,7 +218,7 @@ public class MusicCalculator {
         {
             sortedSongList[f] = songList[f];
         }
-        Arrays.sort(sortedSongList, Song.CompareByTitle);
+        Arrays.sort(sortedSongList, Song.compareByTitle);
         for (int i = 0; i < sortedSongList.length; i++)
         {
             double totalReading = 0;

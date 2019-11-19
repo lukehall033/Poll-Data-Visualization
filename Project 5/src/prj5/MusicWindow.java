@@ -1,139 +1,24 @@
 package prj5;
 import java.awt.Color;
-import java.util.ArrayList;
 import CS2114.Button;
 import CS2114.Window;
-import CS2114.CircleShape;
 import CS2114.Shape;
 import CS2114.TextShape;
 import CS2114.WindowSide;
 
+/**
+ * f
+ * @author lukeh
+ * @version 11.18.2019
+ */
 public class MusicWindow {
 
     /**
      * f
      */
     private Window window;
-    /**
-     * f
-     */
-    private Button previous;
-    /**
-     * f
-     */
-    private Button next;
-    /**
-     * f
-     */
-    private Button sortArtistName;
-    /**
-     * f
-     */
-    private Button sortSongTitle;
-    /**
-     * f
-     */
-    private Button sortReleaseYear;
-    /**
-     * f
-     */
-    private Button sortGenre;
-    /**
-     * f
-     */
-    private Button representHobby;
-    /**
-     * f
-     */
-    private Button representMajor;
-    /**
-     * f
-     */
-    private Button representRegion;
-    /**
-     * f
-     */
-    private Button quit;
-    /**
-     * f
-     */
-    private Shape glyph;
-    /**
-     * f
-     */
-    private Shape bar1;
-    /**
-     * f
-     */
-    private Shape bar2;
-    /**
-     * f
-     */
-    private Shape bar3;
-    /**
-     * f
-     */
-    private Shape bar4;
-    /**
-     * f
-     */
-    private TextShape songText;
-    /**
-     * f
-     */
-    private TextShape songText2;
-    /**
-     * f
-     */
-    private Shape legend1;
-    /**
-     * f
-     */
-    private Shape legend2;
-    /**
-     * f
-     */
-    private Shape legend3;
-    /**
-     * f
-     */
-    private Shape legend4;
-    /**
-     * f
-     */
-    private TextShape legendTitle;
-    /**
-     * f
-     */
-    private TextShape option1;
-    /**
-     * f
-     */
-    private TextShape option2;
-    /**
-     * f
-     */
-    private TextShape option3;
-    /**
-     * f
-     */
-    private TextShape option4;
-    /**
-     * f
-     */
-    private TextShape exampleText;
-    /**
-     * f
-     */
-    private TextShape exampleText2;
-    /**
-     * f
-     */
-    private TextShape exampleText3;
-    /**
-     * f
-     */
-    private Shape exampleShape;
+
+
     /**
      * f
      */
@@ -148,40 +33,40 @@ public class MusicWindow {
         calculator = calc;
         window = new Window();
         window.setTitle("Project 5");
-        previous = new Button("<- Prev");
-        next = new Button("Next ->");
-        sortArtistName = new Button("Sort by Artist Name");
-        sortSongTitle = new Button("Sort by Song Title");
-        sortReleaseYear = new Button("Sort by Release Year");
-        sortGenre = new Button("Sort by Genre");
+        Button previous = new Button("<- Prev");
+        Button next = new Button("Next ->");
+        Button sortArtistName = new Button("Sort by Artist Name");
+        Button sortSongTitle = new Button("Sort by Song Title");
+        Button sortReleaseYear = new Button("Sort by Release Year");
+        Button sortGenre = new Button("Sort by Genre");
         
         sortGenre.onClick(this, "clickedSortByGenre");
         tempMethod();
         
-        representHobby = new Button("Represent Hobby");
-        representMajor = new Button("Represent Major");
-        representRegion = new Button("Represent Region");
-        quit = new Button("Quit");
-        glyph = new Shape(368, 120, 8, 48, Color.BLACK);
-        bar1 = new Shape(322, 120, 100, 12, Color.MAGENTA);
-        bar2 = new Shape(322, 132, 100, 12, Color.BLUE);
-        bar3 = new Shape(322, 144, 100, 12, Color.YELLOW);
-        bar4 = new Shape(322, 156, 100, 12, Color.GREEN);
-        songText = new TextShape(290, 80, "Another One Bites The Dust");
-        songText2 = new TextShape(335, 100, "by Queen");
+        Button representHobby = new Button("Represent Hobby");
+        Button representMajor = new Button("Represent Major");
+        Button representRegion = new Button("Represent Region");
+        Button quit = new Button("Quit");
+        Shape glyph = new Shape(368, 120, 8, 48, Color.BLACK);
+        Shape bar1 = new Shape(322, 120, 100, 12, Color.MAGENTA);
+        Shape bar2 = new Shape(322, 132, 100, 12, Color.BLUE);
+        Shape bar3 = new Shape(322, 144, 100, 12, Color.YELLOW);
+        Shape bar4 = new Shape(322, 156, 100, 12, Color.GREEN);
+        TextShape songText = new TextShape(290, 80, "Another One Bites The Dust");
+        TextShape songText2 = new TextShape(335, 100, "by Queen");
         songText.setBackgroundColor(Color.WHITE);
         songText2.setBackgroundColor(Color.WHITE);
-        legend1 = new Shape(720, 115, 2, 170, Color.BLACK);
-        legend2 = new Shape(608, 115, 2, 170, Color.BLACK);
-        legendTitle = new TextShape(615, 117, "Hobby Legend");
-        option1 = new TextShape(615, 137, "Read", Color.MAGENTA);
-        option2 = new TextShape(615, 157, "Art", Color.BLUE);
-        option3 = new TextShape(615, 177, "Sports", new Color(237, 237, 78));
-        option4 = new TextShape(615, 197, "Music", Color.GREEN);
-        exampleText = new TextShape(630, 217, "Song Title");
-        exampleShape = new Shape(663, 237, 8, 44, Color.BLACK);
-        exampleText2 = new TextShape(619, 250, "Heard");
-        exampleText3 = new TextShape(673, 250, "Likes");
+        Shape legend1 = new Shape(720, 115, 2, 170, Color.BLACK);
+        Shape legend2 = new Shape(608, 115, 2, 170, Color.BLACK);
+        TextShape legendTitle = new TextShape(615, 117, "Hobby Legend");
+        TextShape option1 = new TextShape(615, 137, "Read", Color.MAGENTA);
+        TextShape option2 = new TextShape(615, 157, "Art", Color.BLUE);
+        TextShape option3 = new TextShape(615, 177, "Sports", new Color(237, 237, 78));
+        TextShape option4 = new TextShape(615, 197, "Music", Color.GREEN);
+        TextShape exampleText = new TextShape(630, 217, "Song Title");
+        Shape exampleShape = new Shape(663, 237, 8, 44, Color.BLACK);
+        TextShape exampleText2 = new TextShape(619, 250, "Heard");
+        TextShape exampleText3 = new TextShape(673, 250, "Likes");
         legendTitle.setBackgroundColor(Color.WHITE);
         option1.setBackgroundColor(Color.WHITE);
         option2.setBackgroundColor(Color.WHITE);
@@ -190,8 +75,8 @@ public class MusicWindow {
         exampleText.setBackgroundColor(Color.WHITE);
         exampleText2.setBackgroundColor(Color.WHITE);
         exampleText3.setBackgroundColor(Color.WHITE);
-        legend3 = new Shape(608, 115, 114, 2, Color.BLACK);
-        legend4 = new Shape(608, 283, 114, 2, Color.BLACK);
+        Shape legend3 = new Shape(608, 115, 114, 2, Color.BLACK);
+        Shape legend4 = new Shape(608, 283, 114, 2, Color.BLACK);
         
         window.addButton(previous, WindowSide.NORTH);
         window.addButton(sortArtistName, WindowSide.NORTH);
@@ -227,7 +112,7 @@ public class MusicWindow {
     
     /**
      * f
-     * @param button
+     * @param Button button
      */
     public void clickedSortByGenre(Button button)
     {
