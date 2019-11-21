@@ -47,12 +47,10 @@ public class MusicCalculatorTest extends TestCase {
 
         students.add(stud1);
         students.add(stud2);
-<<<<<<< HEAD
 
-=======
         students.add(stud3);
         
->>>>>>> branch 'master' of https://github.com/lukehall033/Project5.git
+
         song1 = new Song("Hello", "Adele", 1980, "rock");
         song2 = new Song("Baby", "JB", 1980, "pop");
         song3 = new Song("Liar", "Adele", 1972, "rock");
@@ -78,7 +76,7 @@ public class MusicCalculatorTest extends TestCase {
     public void testGetStudents() {
         assertEquals(students, mc.getStudents());
     }
-<<<<<<< HEAD
+
 
 
     /**
@@ -89,6 +87,5 @@ public class MusicCalculatorTest extends TestCase {
         assertEquals(song3, songs[1]);
     }
 
-=======
->>>>>>> branch 'master' of https://github.com/lukehall033/Project5.git
+
 }
