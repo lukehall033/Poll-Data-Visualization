@@ -51,12 +51,12 @@ public class Student {
     /**
      * 
      * 
-     * @param int studentID
-     * @param String submitDate
-     * @param String studentMajor
-     * @param String studentRegion
-     * @param String studentHobby
-     * @param ArrayList<String> studentResponses
+     * @param studentID f
+     * @param submitDate f
+     * @param studentMajor f
+     * @param studentRegion f
+     * @param studentHobby f
+     * @param studentResponses f
      */
     public Student(
         int studentID,
@@ -141,7 +141,7 @@ public class Student {
     /**
      * 
      * 
-     * @param Object obj
+     * @param obj obj
      * @return boolean bool
      */
     public boolean equals(Object obj) {

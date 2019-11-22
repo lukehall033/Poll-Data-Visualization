@@ -6,7 +6,6 @@ package prj5;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Scanner;
 import bsh.ParseException;
 
@@ -28,22 +27,26 @@ public class MusicReader {
      * f
      * @param musicFileName
      * @param surveyFileName
+     * @throws FileNotFoundException 
+     * @throws ParseException 
      * @throws Exception
      */
-    public MusicReader(String musicFileName, String surveyFileName) throws Exception
+    public MusicReader(String musicFileName, String surveyFileName) throws FileNotFoundException
     {
         songs = readSongFile(musicFileName);
         students = readSurveyFile(surveyFileName);
-        MusicWindow window = new MusicWindow(new MusicCalculator(students, songs));
+        GUIMusicWindow window = new GUIMusicWindow(new MusicCalculator(students, songs));
     }
     
     /**
      * f
      * @param filename
      * @return
+     * @throws ParseException 
+     * @throws FileNotFoundException 
      * @throws Exception
      */
-    private Song[] readSongFile(String filename) throws Exception
+    private Song[] readSongFile(String filename) throws FileNotFoundException
     {
         @SuppressWarnings("resource")
         Scanner scan = new Scanner(new File(filename));
@@ -62,19 +65,12 @@ public class MusicReader {
             int year = Integer.valueOf(songList[2]);
             String genre = songList[3];
              
-            if (songList.length < 4)
-            {
-                throw new ParseException();
-            }
+
                 
             Song newSong = new Song(songName, bandName, year, genre);
             //arraySongs[counter] = newSong;
             list.add(newSong);
             counter++; 
-        }
-        if (counter == 0)
-        {
-            throw new Exception();
         }
         scan.close();
         Song[] arraySongs = new Song[counter];
@@ -89,9 +85,10 @@ public class MusicReader {
      * f
      * @param filename
      * @return
+     * @throws FileNotFoundException 
      * @throws Exception
      */
-    private LinkedList<Student> readSurveyFile(String filename) throws Exception
+    private LinkedList<Student> readSurveyFile(String filename) throws FileNotFoundException
     {
         LinkedList<Student> student = new LinkedList<Student>();
         Scanner scan = new Scanner(new File(filename));

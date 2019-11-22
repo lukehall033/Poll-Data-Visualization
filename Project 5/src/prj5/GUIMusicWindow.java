@@ -1,4 +1,5 @@
 package prj5;
+
 import java.awt.Color;
 import CS2114.Button;
 import CS2114.Window;
@@ -8,30 +9,27 @@ import CS2114.WindowSide;
 
 /**
  * f
+ * 
  * @author lukeh
  * @version 11.18.2019
  */
-public class MusicWindow {
-
-    /**
-     * f
-     */
-    private Window window;
-
+public class GUIMusicWindow {
 
     /**
      * f
      */
     private MusicCalculator calculator;
-    
+
+
     /**
      * f
+     * 
      * @param calc
+     *            calc
      */
-    public MusicWindow(MusicCalculator calc)
-    {
+    public GUIMusicWindow(MusicCalculator calc) {
         calculator = calc;
-        window = new Window();
+        Window window = new Window();
         window.setTitle("Project 5");
         Button previous = new Button("<- Prev");
         Button next = new Button("Next ->");
@@ -39,10 +37,10 @@ public class MusicWindow {
         Button sortSongTitle = new Button("Sort by Song Title");
         Button sortReleaseYear = new Button("Sort by Release Year");
         Button sortGenre = new Button("Sort by Genre");
-        
+
         sortGenre.onClick(this, "clickedSortByGenre");
         tempMethod();
-        
+
         Button representHobby = new Button("Represent Hobby");
         Button representMajor = new Button("Represent Major");
         Button representRegion = new Button("Represent Region");
@@ -52,7 +50,8 @@ public class MusicWindow {
         Shape bar2 = new Shape(322, 132, 100, 12, Color.BLUE);
         Shape bar3 = new Shape(322, 144, 100, 12, Color.YELLOW);
         Shape bar4 = new Shape(322, 156, 100, 12, Color.GREEN);
-        TextShape songText = new TextShape(290, 80, "Another One Bites The Dust");
+        TextShape songText = new TextShape(290, 80,
+            "Another One Bites The Dust");
         TextShape songText2 = new TextShape(335, 100, "by Queen");
         songText.setBackgroundColor(Color.WHITE);
         songText2.setBackgroundColor(Color.WHITE);
@@ -61,7 +60,8 @@ public class MusicWindow {
         TextShape legendTitle = new TextShape(615, 117, "Hobby Legend");
         TextShape option1 = new TextShape(615, 137, "Read", Color.MAGENTA);
         TextShape option2 = new TextShape(615, 157, "Art", Color.BLUE);
-        TextShape option3 = new TextShape(615, 177, "Sports", new Color(237, 237, 78));
+        TextShape option3 = new TextShape(615, 177, "Sports", new Color(237,
+            237, 78));
         TextShape option4 = new TextShape(615, 197, "Music", Color.GREEN);
         TextShape exampleText = new TextShape(630, 217, "Song Title");
         Shape exampleShape = new Shape(663, 237, 8, 44, Color.BLACK);
@@ -77,7 +77,7 @@ public class MusicWindow {
         exampleText3.setBackgroundColor(Color.WHITE);
         Shape legend3 = new Shape(608, 115, 114, 2, Color.BLACK);
         Shape legend4 = new Shape(608, 283, 114, 2, Color.BLACK);
-        
+
         window.addButton(previous, WindowSide.NORTH);
         window.addButton(sortArtistName, WindowSide.NORTH);
         window.addButton(sortSongTitle, WindowSide.NORTH);
@@ -109,21 +109,22 @@ public class MusicWindow {
         window.addShape(legend3);
         window.addShape(legend4);
     }
-    
+
+
     /**
      * f
+     * 
      * @param Button button
      */
-    public void clickedSortByGenre(Button button)
-    {
+    public void clickedSortByGenre(Button button) {
         calculator.hobbySortedByGenre();
     }
-    
+
+
     /**
      * f
      */
-    public void tempMethod()
-    {
+    public void tempMethod() {
         calculator.hobbySortedByGenre();
         calculator.hobbySortedByTitle();
     }

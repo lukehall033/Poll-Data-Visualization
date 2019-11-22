@@ -44,10 +44,10 @@ public class Song implements Comparable<Song> {
     /**
      * 
      * 
-     * @param String songName
-     * @param String songArtist
-     * @param int songYear
-     * @param String songGenre
+     * @param songName song
+     * @param songArtist artist
+     * @param songYear year
+     * @param songGenre genre
      */
     public Song(
         String songName,
@@ -115,7 +115,7 @@ public class Song implements Comparable<Song> {
     /**
      * 
      * 
-     * @param Object obj
+     * @param obj obj
      * @return boolean bool
      */
     public boolean equals(Object obj) {

@@ -20,7 +20,7 @@ import java.util.Iterator;
  * @author Luke Hall (lukeh)
  * @author Allison Woods (awoods99)
  * @version 11/15/2019
- * @param T generic
+ * @param <T> generic
  */
 public class LinkedList<T> implements Iterable<T> {
 
@@ -120,7 +120,7 @@ public class LinkedList<T> implements Iterable<T> {
     /**
      * 
      * 
-     * @param T newEntry
+     * @param newEntry T
      */
     public void add(T newEntry) {
         if (newEntry != null) {
@@ -152,7 +152,7 @@ public class LinkedList<T> implements Iterable<T> {
     /**
      * 
      * 
-     * @param int index
+     * @param index int
      * @return T info
      */
     public T get(int index) {
@@ -223,10 +223,11 @@ public class LinkedList<T> implements Iterable<T> {
      * 
      * Add class description here.
      * 
-     * @author
+     * 
      * @author Luke Hall (lukeh)
      * @author Allison Woods (awoods99)
      * @version 11/15/2019
+     * @param T thing
      */
     private class LinkedListIterator<A> implements Iterator<T> {
         /**
