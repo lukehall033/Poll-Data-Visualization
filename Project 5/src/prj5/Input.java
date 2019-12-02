@@ -1,7 +1,6 @@
 package prj5;
 
 import java.io.FileNotFoundException;
-import bsh.ParseException;
 
 /**
  * 
@@ -29,10 +28,12 @@ public class Input {
         //MusicReader reader = new MusicReader("SongList2019F.csv"
         //, "MusicSurveyData2019F.csv");    
         if(args.length == 2) {
+            @SuppressWarnings("unused")
             MusicReader reader = new MusicReader(args[1], args[0]);
         }
         else {
-            MusicReader reader = new MusicReader("SongList2018HalfSongs.csv", "MusicSurveyData2018HolesHalf.csv");
+            @SuppressWarnings("unused")
+            MusicReader reader = new MusicReader("SongList2019F.csv", "MusicSurveyData2019F.csv");
         }
 >>>>>>> branch 'master' of https://github.com/lukehall033/Project5.git
     }

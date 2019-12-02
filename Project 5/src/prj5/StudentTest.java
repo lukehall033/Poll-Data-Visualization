@@ -16,11 +16,16 @@ import student.TestCase;
 
 /**
  * 
+ * Test class for the student class
  * 
+<<<<<<< HEAD
 <<<<<<< HEAD
  * @author
 =======
  *  
+>>>>>>> branch 'master' of https://github.com/lukehall033/Project5.git
+=======
+ * @auther Samantha Khan (ksamantha18)
 >>>>>>> branch 'master' of https://github.com/lukehall033/Project5.git
  * @author Luke Hall (lukeh)
  * @author Allison Woods (awoods99)
@@ -29,11 +34,11 @@ import student.TestCase;
 public class StudentTest extends TestCase {
 
     /**
-     * f
+     * a test student field
      */
     private Student student;
     /**
-     * f
+     * a test list of responses
      */
     private ArrayList<String> list = new ArrayList<String>();
 
@@ -48,7 +53,7 @@ public class StudentTest extends TestCase {
 
 
     /**
-     * f
+     * tests getID()
      */
     public void testGetID() {
         assertEquals(100, student.getID());
@@ -56,7 +61,7 @@ public class StudentTest extends TestCase {
 
 
     /**
-     * f
+     * tests getDate()
      */
     public void testGetDate() {
         assertEquals("11/11/2019 1:26", student.getDate());
@@ -64,7 +69,7 @@ public class StudentTest extends TestCase {
 
 
     /**
-     * f
+     * tests getMajor()
      */
     public void testGetMajor() {
         assertEquals("CS", student.getMajor());
@@ -72,7 +77,7 @@ public class StudentTest extends TestCase {
 
 
     /**
-     * f
+     * tests getRegion()
      */
     public void testGetRegion() {
         assertEquals("Southeastern", student.getRegion());
@@ -80,7 +85,7 @@ public class StudentTest extends TestCase {
 
 
     /**
-     * f
+     * tests getHobby()
      */
     public void testGetHobby() {
         assertEquals("video games", student.getHobby());
@@ -88,7 +93,7 @@ public class StudentTest extends TestCase {
 
 
     /**
-     * f
+     * tests getResponses()
      */
     public void testGetResponses() {
         assertEquals(list, student.getResponses());
@@ -96,7 +101,7 @@ public class StudentTest extends TestCase {
 
 
     /**
-     * f
+     * tests toString();
      */
     public void testToString() {
         assertEquals("Student 100 submitted on: 11/11/2019 "
@@ -106,7 +111,7 @@ public class StudentTest extends TestCase {
 
 
     /**
-     * f
+     * tests equals()
      */
     public void testEquals() {
         Object obj = new Object();
