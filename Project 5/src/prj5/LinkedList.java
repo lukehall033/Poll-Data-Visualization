@@ -6,8 +6,8 @@
  * I will not lie, cheat, or steal, nor will I
  * accept the actions of those who do.
  * -- Allison Woods (awoods99)
- * -- Luke Hall (lukehall033)
- * -- Samantha Khan (ksamantha18)
+ * --
+ * --
  */
 package prj5;
 

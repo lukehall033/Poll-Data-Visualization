@@ -11,10 +11,10 @@
  */
 package prj5;
 
-import java.util.ArrayList;
 import student.TestCase;
 
 /**
+<<<<<<< HEAD
  * 
  * test class for the LinkedList class
  * 
@@ -22,6 +22,12 @@ import student.TestCase;
  * @author Samantha Khan (ksamantha18)
  * @author Allison Woods (awoods99)
  * @version 11/28/2019
+=======
+ * f
+ * 
+ * @author lukeh
+ * @version 11.28.2019
+>>>>>>> branch 'master' of https://github.com/lukehall033/Project5.git
  */
 public class LinkedListTest extends TestCase {
 
@@ -53,12 +59,6 @@ public class LinkedListTest extends TestCase {
     public void setUp() {
         list = new LinkedList<Student>();
         list2 = new LinkedList<Student>();
-        student1 = new Student(1, "11/17/2019 4:19", "CS", "Southeastern",
-            "video games", new ArrayList<String>());
-        student2 = new Student(2, "11/17/2019 4:19", "CS", "Southeastern",
-            "video games", new ArrayList<String>());
-        student3 = new Student(3, "11/17/2019 4:19", "CS", "Southeastern",
-            "video games", new ArrayList<String>());
         list.add(student1);
         list.add(student2);
     }

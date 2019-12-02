@@ -18,7 +18,15 @@ import java.util.ArrayList;
  * Creates a student object, that stores the information
  * from the survey data
  * 
+<<<<<<< HEAD
+<<<<<<< HEAD
+ * @author
+=======
+ * 
+>>>>>>> branch 'master' of https://github.com/lukehall033/Project5.git
+=======
  * @author Samantha Kahn (ksamantha18)
+>>>>>>> branch 'master' of https://github.com/lukehall033/Project5.git
  * @author Luke Hall (lukeh)
  * @author Allison Woods (awoods99)
  * @version 11/15/2019

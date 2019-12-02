@@ -182,4 +182,5 @@ public class MusicCalculatorTest extends TestCase {
         assertEquals(0, calc.calcForRegion(song1)[3]);
         assertEquals(100, calc.calcForRegion(song2)[6]);
     }
+
 }
