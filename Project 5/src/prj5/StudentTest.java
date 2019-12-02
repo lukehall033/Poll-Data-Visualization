@@ -16,8 +16,9 @@ import student.TestCase;
 
 /**
  * 
+ * Test class for the student class
  * 
- *  
+ * @auther Samantha Khan (ksamantha18)
  * @author Luke Hall (lukeh)
  * @author Allison Woods (awoods99)
  * @version 11/15/2019
@@ -25,13 +26,14 @@ import student.TestCase;
 public class StudentTest extends TestCase {
 
     /**
-     * f
+     * a test student field
      */
     private Student student;
     /**
-     * f
+     * a test list of responses
      */
     private ArrayList<String> list = new ArrayList<String>();
+
 
     /**
      * Sets up before each test method.
@@ -41,50 +43,57 @@ public class StudentTest extends TestCase {
             "video games", list);
     }
 
+
     /**
-     * f
+     * tests getID()
      */
     public void testGetID() {
         assertEquals(100, student.getID());
     }
 
+
     /**
-     * f
+     * tests getDate()
      */
     public void testGetDate() {
         assertEquals("11/11/2019 1:26", student.getDate());
     }
 
+
     /**
-     * f
+     * tests getMajor()
      */
     public void testGetMajor() {
         assertEquals("CS", student.getMajor());
     }
 
+
     /**
-     * f
+     * tests getRegion()
      */
     public void testGetRegion() {
         assertEquals("Southeastern", student.getRegion());
     }
 
+
     /**
-     * f
+     * tests getHobby()
      */
     public void testGetHobby() {
         assertEquals("video games", student.getHobby());
     }
 
+
     /**
-     * f
+     * tests getResponses()
      */
     public void testGetResponses() {
         assertEquals(list, student.getResponses());
     }
 
+
     /**
-     * f
+     * tests toString();
      */
     public void testToString() {
         assertEquals("Student 100 submitted on: 11/11/2019 "
@@ -92,8 +101,9 @@ public class StudentTest extends TestCase {
             + "region and whos hobby is video games", student.toString());
     }
 
+
     /**
-     * f
+     * tests equals()
      */
     public void testEquals() {
         Object obj = new Object();

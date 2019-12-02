@@ -15,8 +15,10 @@ import java.util.ArrayList;
 
 /**
  * 
+ * Creates a student object, that stores the information
+ * from the survey data
  * 
- * 
+ * @author Samantha Kahn (ksamantha18)
  * @author Luke Hall (lukeh)
  * @author Allison Woods (awoods99)
  * @version 11/15/2019
@@ -24,39 +26,47 @@ import java.util.ArrayList;
 public class Student {
 
     /**
-     * f
+     * students ID
      */
     private int id;
     /**
-     * f
+     * date the student submitted
      */
     private String date;
     /**
-     * f
+     * students major
      */
     private String major;
     /**
-     * f
+     * students region
      */
     private String region;
     /**
-     * f
+     * students hobby
      */
     private String hobby;
     /**
-     * f
+     * the list of students responses
      */
     private ArrayList<String> responses;
 
+
     /**
      * 
+     * the constructor for student
      * 
-     * @param studentID f
-     * @param submitDate f
-     * @param studentMajor f
-     * @param studentRegion f
-     * @param studentHobby f
-     * @param studentResponses f
+     * @param studentID
+     *            ID
+     * @param submitDate
+     *            date
+     * @param studentMajor
+     *            major
+     * @param studentRegion
+     *            region
+     * @param studentHobby
+     *            hobby
+     * @param studentResponses
+     *            responses
      */
     public Student(
         int studentID,
@@ -73,8 +83,10 @@ public class Student {
         responses = studentResponses;
     }
 
+
     /**
      * 
+     * returns students ID
      * 
      * @return int id
      */
@@ -82,8 +94,10 @@ public class Student {
         return this.id;
     }
 
+
     /**
      * 
+     * returns date of submission for the student
      * 
      * @return String date
      */
@@ -91,8 +105,10 @@ public class Student {
         return this.date;
     }
 
+
     /**
      * 
+     * returns students major
      * 
      * @return String major
      */
@@ -100,8 +116,10 @@ public class Student {
         return this.major;
     }
 
+
     /**
      * 
+     * returns students region
      * 
      * @return String region
      */
@@ -109,8 +127,10 @@ public class Student {
         return this.region;
     }
 
+
     /**
      * 
+     * returns students hobby
      * 
      * @return String hobby
      */
@@ -118,8 +138,11 @@ public class Student {
         return this.hobby;
     }
 
+
     /**
      * 
+     * returns the arrayList of the students
+     * responses
      * 
      * @return ArrayList<String> responses
      */
@@ -127,8 +150,11 @@ public class Student {
         return this.responses;
     }
 
+
     /**
      * 
+     * returns a string representation of
+     * the students fields
      * 
      * @return String toString
      */
@@ -138,10 +164,13 @@ public class Student {
             + " region and whos hobby is " + getHobby());
     }
 
+
     /**
      * 
+     * compares to students for equality
      * 
-     * @param obj obj
+     * @param obj
+     *            comparing object
      * @return boolean bool
      */
     public boolean equals(Object obj) {
