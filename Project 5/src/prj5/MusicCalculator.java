@@ -1,28 +1,49 @@
+/**
+ * Virginia Tech Honor Code Pledge:
+ *
+ * As a Hokie, I will conduct myself with honor
+ * and integrity at all times.
+ * I will not lie, cheat, or steal, nor will I
+ * accept the actions of those who do.
+ * -- Allison Woods (awoods99)
+ * -- Luke Hall (lukehall033)
+ * -- Samantha Khan (ksamantha18)
+ */
 package prj5;
 
 import java.util.Arrays;
 
 /**
- * f
+ * The MusicCalculator class, which handles sorting the
+ * array of songs, as well as going through each students
+ * responses and calculating percentage values for each song
  * 
- * @author lukeh
- * @version 11.18.2019
+ * @author Luke Hall (lukehall033)
+ * @author Samantha Khan (ksamantha18)
+ * @author Allison Woods (awoods99)
+ * @version 11/18/2019
  */
 public class MusicCalculator {
 
     /**
-     * f
+     * the list of students passed from the parameters
      */
     private LinkedList<Student> studentList;
     /**
-     * f
+     * the list of songs that will be sorted
      */
     private Song[] songList;
+    /**
+     * a permanent list of songs, used to compare the position of
+     * a song in the list to where it is in the survey data
+     */
     private Song[] permList;
 
 
     /**
-     * f
+     * 
+     * MusicCalculator constructor, that takes a list of students
+     * and songs as parmeters
      * 
      * @param students
      *            linkedlist
@@ -33,15 +54,15 @@ public class MusicCalculator {
         studentList = students;
         songList = songs;
         permList = new Song[songList.length];
-        for (int i = 0; i < songList.length; i++)
-        {
+        for (int i = 0; i < songList.length; i++) {
             permList[i] = songList[i];
         }
     }
 
 
     /**
-     * f
+     * 
+     * A getter method to return the list of student objects
      * 
      * @return LinkedList<Student> students
      */
@@ -51,57 +72,78 @@ public class MusicCalculator {
 
 
     /**
-     * f
+     * 
+     * A getter method to return the array of songs
      * 
      * @return Song[] songs
      */
     public Song[] getSongs() {
         return songList;
     }
-    
-    public int getIndexOf(Song song)
-    {
-        for (int i = 0; i < songList.length; i++)
-        {
-            if (permList[i] == song)
-            {
+
+
+    /**
+     * 
+     * A method that gets the index of the song
+     * in the original unsorted list
+     * 
+     * @param song
+     *            song
+     * @return int index
+     */
+    public int getIndexOf(Song song) {
+        for (int i = 0; i < songList.length; i++) {
+            if (permList[i] == song) {
                 return i;
             }
         }
         return 0;
     }
 
-    public void sortedByArtistName()
-    {
-        Arrays.sort(songList, Song.compareByArtistName);
-        //System.out.println(Arrays.toString(songList));
-    }
-    
-    public void sortedByReleaseYear()
-    {
-        Arrays.sort(songList, Song.compareByYear);
-        //System.out.println(Arrays.toString(songList));
-    }
 
     /**
-     * f
+     * sorts songList according to the songs artist name
+     */
+    public void sortedByArtistName() {
+        Arrays.sort(songList, Song.compareByArtistName);
+    }
+
+
+    /**
+     * sorts songList according to the songs release year
+     */
+    public void sortedByReleaseYear() {
+        Arrays.sort(songList, Song.compareByYear);
+    }
+
+
+    /**
+     * sorts songList according to the songs genre
      */
     public void sortedByGenre() {
         Arrays.sort(songList, Song.compareByGenre);
-        //System.out.println(Arrays.toString(songList));
     }
 
 
     /**
-     * f
+     * sorts songlist according to the songs title
      */
     public void sortedByTitle() {
         Arrays.sort(songList, Song.compareByTitle);
-        //System.out.println(Arrays.toString(songList));       
     }
-    
-    public int[] calcForHobby(Song song)
-    {
+
+
+    /**
+     * 
+     * this method calculates the percentage of students that
+     * liked and heard the song that passed as a paremeter based on
+     * their hobbies. It returns these 8 values as an array of integers
+     * 
+     * @param song
+     *            song
+     * @return int[] values
+     */
+    public int[] calcForHobby(Song song) {
         double totalReading = 0;
         double totalArt = 0;
         double totalSports = 0;
@@ -121,14 +163,14 @@ public class MusicCalculator {
                     .equals(" ")) {
                     totalReading++;
                 }
-                if (studentList.get(j + 1).getResponses().get(songIndex)
-                    .equals("Yes")) {
+                if (studentList.get(j + 1).getResponses().get(songIndex).equals(
+                    "Yes")) {
                     heardReading++;
                 }
                 if ((songIndex + 1 <= (studentList.get(j + 1).getResponses()
                     .size() - 1))) {
-                    if (studentList.get(j + 1).getResponses().get(songIndex
-                        + 1).equals("Yes")) {
+                    if (studentList.get(j + 1).getResponses().get(songIndex + 1)
+                        .equals("Yes")) {
                         likedReading++;
                     }
                 }
@@ -138,14 +180,14 @@ public class MusicCalculator {
                     .equals(" ")) {
                     totalArt++;
                 }
-                if (studentList.get(j + 1).getResponses().get(songIndex)
-                    .equals("Yes")) {
+                if (studentList.get(j + 1).getResponses().get(songIndex).equals(
+                    "Yes")) {
                     heardArt++;
                 }
                 if ((songIndex + 1 <= (studentList.get(j + 1).getResponses()
                     .size() - 1))) {
-                    if (studentList.get(j + 1).getResponses().get(songIndex
-                        + 1).equals("Yes")) {
+                    if (studentList.get(j + 1).getResponses().get(songIndex + 1)
+                        .equals("Yes")) {
                         likedArt++;
                     }
                 }
@@ -155,14 +197,14 @@ public class MusicCalculator {
                     .equals(" ")) {
                     totalSports++;
                 }
-                if (studentList.get(j + 1).getResponses().get(songIndex)
-                    .equals("Yes")) {
+                if (studentList.get(j + 1).getResponses().get(songIndex).equals(
+                    "Yes")) {
                     heardSports++;
                 }
                 if ((songIndex + 1 <= (studentList.get(j + 1).getResponses()
                     .size() - 1))) {
-                    if (studentList.get(j + 1).getResponses().get(songIndex
-                        + 1).equals("Yes")) {
+                    if (studentList.get(j + 1).getResponses().get(songIndex + 1)
+                        .equals("Yes")) {
                         likedSports++;
                     }
                 }
@@ -172,14 +214,14 @@ public class MusicCalculator {
                     .equals(" ")) {
                     totalMusic++;
                 }
-                if (studentList.get(j + 1).getResponses().get(songIndex)
-                    .equals("Yes")) {
+                if (studentList.get(j + 1).getResponses().get(songIndex).equals(
+                    "Yes")) {
                     heardMusic++;
                 }
                 if ((songIndex + 1 <= (studentList.get(j + 1).getResponses()
                     .size() - 1))) {
-                    if (studentList.get(j + 1).getResponses().get(songIndex
-                        + 1).equals("Yes")) {
+                    if (studentList.get(j + 1).getResponses().get(songIndex + 1)
+                        .equals("Yes")) {
                         likedMusic++;
                     }
                 }
@@ -208,9 +250,19 @@ public class MusicCalculator {
         vals[7] = (int)(likedMusic / totalMusic * 100);
         return vals;
     }
-    
-    public int[] calcForMajor(Song song)
-    {
+
+
+    /**
+     * 
+     * this method calculates the percentage of students that
+     * liked and heard the song that passed as a paremeter based on
+     * their major. It returns these 8 values as an array of integers
+     * 
+     * @param song
+     *            song
+     * @return int[] values
+     */
+    public int[] calcForMajor(Song song) {
         double totalCompSci = 0;
         double totalEng = 0;
         double totalMathCMDA = 0;
@@ -230,31 +282,32 @@ public class MusicCalculator {
                     .equals(" ")) {
                     totalCompSci++;
                 }
-                if (studentList.get(j + 1).getResponses().get(songIndex)
-                    .equals("Yes")) {
+                if (studentList.get(j + 1).getResponses().get(songIndex).equals(
+                    "Yes")) {
                     heardCompSci++;
                 }
                 if ((songIndex + 1 <= (studentList.get(j + 1).getResponses()
                     .size() - 1))) {
-                    if (studentList.get(j + 1).getResponses().get(songIndex
-                        + 1).equals("Yes")) {
+                    if (studentList.get(j + 1).getResponses().get(songIndex + 1)
+                        .equals("Yes")) {
                         likedCompSci++;
                     }
                 }
             }
-            else if (studentList.get(j + 1).getMajor().equals("Other Engineering")) {
+            else if (studentList.get(j + 1).getMajor().equals(
+                "Other Engineering")) {
                 if (!studentList.get(j + 1).getResponses().get(songIndex)
                     .equals(" ")) {
                     totalEng++;
                 }
-                if (studentList.get(j + 1).getResponses().get(songIndex)
-                    .equals("Yes")) {
+                if (studentList.get(j + 1).getResponses().get(songIndex).equals(
+                    "Yes")) {
                     heardEng++;
                 }
                 if ((songIndex + 1 <= (studentList.get(j + 1).getResponses()
                     .size() - 1))) {
-                    if (studentList.get(j + 1).getResponses().get(songIndex
-                        + 1).equals("Yes")) {
+                    if (studentList.get(j + 1).getResponses().get(songIndex + 1)
+                        .equals("Yes")) {
                         likedEng++;
                     }
                 }
@@ -264,14 +317,14 @@ public class MusicCalculator {
                     .equals(" ")) {
                     totalMathCMDA++;
                 }
-                if (studentList.get(j + 1).getResponses().get(songIndex)
-                    .equals("Yes")) {
+                if (studentList.get(j + 1).getResponses().get(songIndex).equals(
+                    "Yes")) {
                     heardMathCMDA++;
                 }
                 if ((songIndex + 1 <= (studentList.get(j + 1).getResponses()
                     .size() - 1))) {
-                    if (studentList.get(j + 1).getResponses().get(songIndex
-                        + 1).equals("Yes")) {
+                    if (studentList.get(j + 1).getResponses().get(songIndex + 1)
+                        .equals("Yes")) {
                         likedMathCMDA++;
                     }
                 }
@@ -281,14 +334,14 @@ public class MusicCalculator {
                     .equals(" ")) {
                     totalOther++;
                 }
-                if (studentList.get(j + 1).getResponses().get(songIndex)
-                    .equals("Yes")) {
+                if (studentList.get(j + 1).getResponses().get(songIndex).equals(
+                    "Yes")) {
                     heardOther++;
                 }
                 if ((songIndex + 1 <= (studentList.get(j + 1).getResponses()
                     .size() - 1))) {
-                    if (studentList.get(j + 1).getResponses().get(songIndex
-                        + 1).equals("Yes")) {
+                    if (studentList.get(j + 1).getResponses().get(songIndex + 1)
+                        .equals("Yes")) {
                         likedOther++;
                     }
                 }
@@ -317,9 +370,19 @@ public class MusicCalculator {
         vals[7] = (int)(likedOther / totalOther * 100);
         return vals;
     }
-    
-    public int[] calcForRegion(Song song)
-    {
+
+
+    /**
+     * 
+     * this method calculates the percentage of students that
+     * liked and heard the song that passed as a paremeter based on
+     * their region. It returns these 8 values as an array of integers
+     * 
+     * @param song
+     *            song
+     * @return int[] values
+     */
+    public int[] calcForRegion(Song song) {
         double totalNortheast = 0;
         double totalSoutheast = 0;
         double totalRest = 0;
@@ -339,14 +402,14 @@ public class MusicCalculator {
                     .equals(" ")) {
                     totalNortheast++;
                 }
-                if (studentList.get(j + 1).getResponses().get(songIndex)
-                    .equals("Yes")) {
+                if (studentList.get(j + 1).getResponses().get(songIndex).equals(
+                    "Yes")) {
                     heardNortheast++;
                 }
                 if ((songIndex + 1 <= (studentList.get(j + 1).getResponses()
                     .size() - 1))) {
-                    if (studentList.get(j + 1).getResponses().get(songIndex
-                        + 1).equals("Yes")) {
+                    if (studentList.get(j + 1).getResponses().get(songIndex + 1)
+                        .equals("Yes")) {
                         likedNortheast++;
                     }
                 }
@@ -356,31 +419,32 @@ public class MusicCalculator {
                     .equals(" ")) {
                     totalSoutheast++;
                 }
-                if (studentList.get(j + 1).getResponses().get(songIndex)
-                    .equals("Yes")) {
+                if (studentList.get(j + 1).getResponses().get(songIndex).equals(
+                    "Yes")) {
                     heardSoutheast++;
                 }
                 if ((songIndex + 1 <= (studentList.get(j + 1).getResponses()
                     .size() - 1))) {
-                    if (studentList.get(j + 1).getResponses().get(songIndex
-                        + 1).equals("Yes")) {
+                    if (studentList.get(j + 1).getResponses().get(songIndex + 1)
+                        .equals("Yes")) {
                         likedSoutheast++;
                     }
                 }
             }
-            else if (studentList.get(j + 1).getRegion().equals("United States (other than Southeast or Northwest)")) {
+            else if (studentList.get(j + 1).getRegion().equals(
+                "United States (other than Southeast or Northwest)")) {
                 if (!studentList.get(j + 1).getResponses().get(songIndex)
                     .equals(" ")) {
                     totalRest++;
                 }
-                if (studentList.get(j + 1).getResponses().get(songIndex)
-                    .equals("Yes")) {
+                if (studentList.get(j + 1).getResponses().get(songIndex).equals(
+                    "Yes")) {
                     heardRest++;
                 }
                 if ((songIndex + 1 <= (studentList.get(j + 1).getResponses()
                     .size() - 1))) {
-                    if (studentList.get(j + 1).getResponses().get(songIndex
-                        + 1).equals("Yes")) {
+                    if (studentList.get(j + 1).getResponses().get(songIndex + 1)
+                        .equals("Yes")) {
                         likedRest++;
                     }
                 }
@@ -390,14 +454,14 @@ public class MusicCalculator {
                     .equals(" ")) {
                     totalOutside++;
                 }
-                if (studentList.get(j + 1).getResponses().get(songIndex)
-                    .equals("Yes")) {
+                if (studentList.get(j + 1).getResponses().get(songIndex).equals(
+                    "Yes")) {
                     heardOutside++;
                 }
                 if ((songIndex + 1 <= (studentList.get(j + 1).getResponses()
                     .size() - 1))) {
-                    if (studentList.get(j + 1).getResponses().get(songIndex
-                        + 1).equals("Yes")) {
+                    if (studentList.get(j + 1).getResponses().get(songIndex + 1)
+                        .equals("Yes")) {
                         likedOutside++;
                     }
                 }
@@ -426,5 +490,5 @@ public class MusicCalculator {
         vals[7] = (int)(likedOutside / totalOutside * 100);
         return vals;
     }
-    
+
 }

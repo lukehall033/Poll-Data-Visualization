@@ -1,3 +1,14 @@
+/**
+ * Virginia Tech Honor Code Pledge:
+ *
+ * As a Hokie, I will conduct myself with honor
+ * and integrity at all times.
+ * I will not lie, cheat, or steal, nor will I
+ * accept the actions of those who do.
+ * -- Allison Woods (awoods99)
+ * -- Luke Hall (lukehall033)
+ * -- Samantha Khan (ksamantha18)
+ */
 package prj5;
 
 import java.awt.Color;
@@ -9,48 +20,119 @@ import CS2114.TextShape;
 import CS2114.WindowSide;
 
 /**
- * f
  * 
- * @author lukeh
- * @version 11.18.2019
+ * This is the front end class, that creates the window and
+ * utlizes MusicCalculator methods to display the proper data and
+ * graphics
+ * 
+ * @author Luke Hall (lukehall033)
+ * @author Allison Woods (awoods99)
+ * @author Samantha Khan (ksamantha18)
+ * @version 11/18/2019
  */
 public class GUIMusicWindow {
 
     /**
-     * f
+     * the MusicCalculator thats passed to this class
      */
     private MusicCalculator calculator;
+    /**
+     * the window thats created
+     */
     private Window window;
+    /**
+     * the title TextShape for the legend
+     */
     private TextShape legendTitle;
+    /**
+     * the text for the first option for each representation
+     */
     private TextShape option1;
+    /**
+     * the text for the second option for each representation
+     */
     private TextShape option2;
+    /**
+     * the text for the third option for each representation
+     */
     private TextShape option3;
+    /**
+     * the text for the fourth option for each representation
+     */
     private TextShape option4;
+    /**
+     * one of the sides of the legend box
+     */
     private Shape legend1;
+    /**
+     * one of the sides of the legend box
+     */
     private Shape legend2;
+    /**
+     * one of the sides of the legend box
+     */
     private Shape legend3;
+    /**
+     * one of the sides of the legend box
+     */
     private Shape legend4;
+    /**
+     * the shape for the example glyph in the legend
+     */
     private Shape exampleGlyph;
+    /**
+     * the title for the example glyph in the legend
+     */
     private TextShape exampleTitle;
+    /**
+     * the "heard" text in the legend
+     */
     private TextShape exampleHeard;
+    /**
+     * the "liked" text in the legend
+     */
     private TextShape exampleLikes;
+    /**
+     * the previous button
+     */
     private Button previous;
+    /**
+     * the next button
+     */
     private Button next;
-    
+    /**
+     * an integer to represent the current page number
+     */
     private int pageNum = 1;
+    /**
+     * an integer to represent the current sort
+     */
     private int sort = 0;
-    
+    /**
+     * an arraylist to store the many glyph shape objects
+     */
     private ArrayList<Shape> glyphs = new ArrayList<Shape>();
+    /**
+     * an arraylist to store the many song title textshapes
+     */
     private ArrayList<TextShape> songText = new ArrayList<TextShape>();
+    /**
+     * an arraylist to store the many song artist textshapes
+     */
     private ArrayList<TextShape> artistText = new ArrayList<TextShape>();
+    /**
+     * an arraylist to store the colored percentage bars on each page for each
+     * song
+     */
     private ArrayList<Shape> bars = new ArrayList<Shape>();
 
 
     /**
-     * f
+     * 
+     * the constructor for GUIMusicWindow, which creates the buttons
      * 
      * @param calc
-     *            calc
+     *            calculator
      */
     public GUIMusicWindow(MusicCalculator calc) {
         calculator = calc;
@@ -60,7 +142,7 @@ public class GUIMusicWindow {
         previous.onClick(this, "clickedPrev");
         next = new Button("Next ->");
         next.onClick(this, "clickedNext");
-        
+
         Button sortArtistName = new Button("Sort by Artist Name");
         sortArtistName.onClick(this, "clickedSortByArtistName");
         Button sortSongTitle = new Button("Sort by Song Title");
@@ -76,10 +158,10 @@ public class GUIMusicWindow {
         representMajor.onClick(this, "clickedRepresentMajor");
         Button representRegion = new Button("Represent Region");
         representRegion.onClick(this, "clickedRepresentRegion");
-        
+
         Button quit = new Button("Quit");
         quit.onClick(this, "clickedQuit");
-        
+
         @SuppressWarnings("unused")
         Shape glyph = new Shape(368, 120, 8, 48, Color.BLACK);
         @SuppressWarnings("unused")
@@ -100,8 +182,7 @@ public class GUIMusicWindow {
         legendTitle = new TextShape(615, 117, "Hobby Legend");
         option1 = new TextShape(615, 137, "Read", Color.MAGENTA);
         option2 = new TextShape(615, 157, "Art", Color.BLUE);
-        option3 = new TextShape(615, 177, "Sports", new Color(237,
-            237, 78));
+        option3 = new TextShape(615, 177, "Sports", new Color(237, 237, 78));
         option4 = new TextShape(615, 197, "Music", Color.GREEN);
         exampleTitle = new TextShape(630, 217, "Song Title");
         exampleGlyph = new Shape(663, 237, 8, 44, Color.BLACK);
@@ -128,42 +209,77 @@ public class GUIMusicWindow {
         window.addButton(representMajor, WindowSide.SOUTH);
         window.addButton(representRegion, WindowSide.SOUTH);
         window.addButton(quit, WindowSide.SOUTH);
-        
+
         previous.disable();
     }
 
 
     /**
-     * f
      * 
-     * @param Button button
+     * This method gives function to the sort by genre button,
+     * and sorts the list of songs accordingly, then updates the window
+     * 
+     * @param Button
+     *            button
      */
-    public void clickedSortByGenre(Button button) 
-    {
+    public void clickedSortByGenre(Button button) {
         calculator.sortedByGenre();
         displayGlyphs();
     }
-    
-    public void clickedSortByTitle(Button button)
-    {
+
+
+    /**
+     * 
+     * This method gives function to the sort by title button,
+     * and sorts the list of songs accordingly, then updates the window
+     * 
+     * @param Button
+     *            button
+     */
+    public void clickedSortByTitle(Button button) {
         calculator.sortedByTitle();
         displayGlyphs();
     }
-    
-    public void clickedSortByArtistName(Button button)
-    {
+
+
+    /**
+     * 
+     * This method gives function to the sort by artist name button,
+     * and sorts the list of songs accordingly, then updates the window
+     * 
+     * @param Button
+     *            button
+     */
+    public void clickedSortByArtistName(Button button) {
         calculator.sortedByArtistName();
         displayGlyphs();
     }
-    
-    public void clickedSortByReleaseYear(Button button)
-    {
+
+
+    /**
+     * 
+     * This method gives function to the sort by release year button,
+     * and sorts the list of songs accordingly, then updates the window
+     * 
+     * @param Button
+     *            button
+     */
+    public void clickedSortByReleaseYear(Button button) {
         calculator.sortedByReleaseYear();
         displayGlyphs();
     }
-    
-    public void clickedRepresentHobby(Button button)
-    {
+
+
+    /**
+     * 
+     * This method gives function to the represent hobby button,
+     * and changes the legend and which percentage bars are shown accordingly,
+     * then updates the shapes on the window
+     * 
+     * @param button
+     *            button
+     */
+    public void clickedRepresentHobby(Button button) {
         window.removeShape(legendTitle);
         window.removeShape(option1);
         window.removeShape(option2);
@@ -195,9 +311,18 @@ public class GUIMusicWindow {
         sort = 0;
         displayGlyphs();
     }
-    
-    public void clickedRepresentRegion(Button button)
-    {
+
+
+    /**
+     * 
+     * This method gives function to the represent region button,
+     * and changes the legend and which percentage bars are shown accordingly,
+     * then updates the shapes on the window
+     * 
+     * @param button
+     *            button
+     */
+    public void clickedRepresentRegion(Button button) {
         window.removeShape(legendTitle);
         window.removeShape(option1);
         window.removeShape(option2);
@@ -206,7 +331,8 @@ public class GUIMusicWindow {
         legendTitle = new TextShape(615, 117, "Region Legend");
         option1 = new TextShape(615, 137, "Northeast US", Color.MAGENTA);
         option2 = new TextShape(615, 157, "Southeast US", Color.BLUE);
-        option3 = new TextShape(615, 177, "Rest of the US", new Color(237, 237, 78));
+        option3 = new TextShape(615, 177, "Rest of the US", new Color(237, 237,
+            78));
         option4 = new TextShape(615, 197, "Outside the US", Color.GREEN);
         legendTitle.setBackgroundColor(Color.WHITE);
         option1.setBackgroundColor(Color.WHITE);
@@ -229,9 +355,18 @@ public class GUIMusicWindow {
         sort = 1;
         displayGlyphs();
     }
-    
-    public void clickedRepresentMajor(Button button)
-    {
+
+
+    /**
+     * 
+     * This method gives function to the represent major button,
+     * and changes the legend and which percentage bars are shown accordingly,
+     * then updates the shapes on the window
+     * 
+     * @param button
+     *            button
+     */
+    public void clickedRepresentMajor(Button button) {
         window.removeShape(legendTitle);
         window.removeShape(option1);
         window.removeShape(option2);
@@ -263,44 +398,71 @@ public class GUIMusicWindow {
         sort = 2;
         displayGlyphs();
     }
-    
-    public void clickedQuit(Button button)
-    {
+
+
+    /**
+     * 
+     * gives function to the quit button, and exits the window
+     * 
+     * @param button
+     *            button
+     */
+    public void clickedQuit(Button button) {
         System.exit(0);
     }
-    
-    public void clickedNext(Button button)
-    {
+
+
+    /**
+     * 
+     * gives function to the next button, and increases the page number
+     * by 1, disables itself if theres no more pages
+     * 
+     * @param button
+     *            button
+     */
+    public void clickedNext(Button button) {
         previous.enable();
         pageNum++;
-        if (pageNum == (int)Math.ceil((double)calculator.getSongs().length / 9.0))
-        {
+        if (pageNum == (int)Math.ceil((double)calculator.getSongs().length
+            / 9.0)) {
             next.disable();
         }
         displayGlyphs();
     }
-    
-    public void clickedPrev(Button button)
-    {
+
+
+    /**
+     * 
+     * gives function to the previous button, and decreases the page number
+     * by 1, disables itself if its at the first page
+     * 
+     * @param button
+     */
+    public void clickedPrev(Button button) {
         next.enable();
         pageNum--;
-        if (pageNum == 1)
-        {
+        if (pageNum == 1) {
             previous.disable();
         }
         displayGlyphs();
     }
 
-    public void displayGlyphs()
-    {
-        for (int k = 0; k < glyphs.size(); k++)
-        {
+
+    /**
+     * 
+     * This method updates the window with the proper glyphs, legend, percentage
+     * bars, and
+     * sorted display based upon the order of the songlist, as well as what
+     * representation was clicked last
+     * 
+     */
+    public void displayGlyphs() {
+        for (int k = 0; k < glyphs.size(); k++) {
             window.removeShape(glyphs.get(k));
             window.removeShape(songText.get(k));
             window.removeShape(artistText.get(k));
         }
-        for (int f = 0; f < glyphs.size() * 8; f++)
-        {
+        for (int f = 0; f < glyphs.size() * 8; f++) {
             window.removeShape(bars.get(f));
         }
         bars.clear();
@@ -310,68 +472,65 @@ public class GUIMusicWindow {
         ArrayList<String> songTitles = new ArrayList<String>();
         ArrayList<String> songArtists = new ArrayList<String>();
         int val = pageNum * 9;
-        if (val > calculator.getSongs().length)
-        {
+        if (val > calculator.getSongs().length) {
             val = calculator.getSongs().length;
         }
-        for (int i = ((pageNum - 1) * 9); i < val; i++)
-        {
+        for (int i = ((pageNum - 1) * 9); i < val; i++) {
             songTitles.add(calculator.getSongs()[i].getName());
             songArtists.add(calculator.getSongs()[i].getArtist());
         }
-        for (int j = 1; j < songTitles.size() + 1; j++)
-        {
+        for (int j = 1; j < songTitles.size() + 1; j++) {
             int[] temp = new int[8];
             int num = (pageNum - 1) * 9;
             int x = 0;
             int y = 0;
-            if (j == 1 || j == 4 || j == 7)
-            {
+            if (j == 1 || j == 4 || j == 7) {
                 x = 125;
             }
-            if (j == 2 || j == 5 || j == 8)
-            {
+            if (j == 2 || j == 5 || j == 8) {
                 x = 320;
             }
-            if (j == 3 || j == 6 || j == 9)
-            {
+            if (j == 3 || j == 6 || j == 9) {
                 x = 515;
             }
-            if (j > 0 && j < 4)
-            {
+            if (j > 0 && j < 4) {
                 y = 40;
             }
-            if (j > 3 && j < 7)
-            {
+            if (j > 3 && j < 7) {
                 y = 130;
             }
-            if (j > 6 && j < 10)
-            {
+            if (j > 6 && j < 10) {
                 y = 220;
             }
-            if (sort == 0)
-            {
-                temp = calculator.calcForHobby(calculator.getSongs()[j - 1 + num]);
+            if (sort == 0) {
+                temp = calculator.calcForHobby(calculator.getSongs()[j - 1
+                    + num]);
             }
-            if (sort == 1)
-            {
-                temp = calculator.calcForRegion(calculator.getSongs()[j - 1 + num]);
+            if (sort == 1) {
+                temp = calculator.calcForRegion(calculator.getSongs()[j - 1
+                    + num]);
             }
-            if (sort == 2)
-            {
-                temp = calculator.calcForMajor(calculator.getSongs()[j - 1 + num]);
+            if (sort == 2) {
+                temp = calculator.calcForMajor(calculator.getSongs()[j - 1
+                    + num]);
             }
             Shape glyph = new Shape(x, y, 8, 48, Color.BLACK);
-            TextShape title = new TextShape(x, y, songTitles.get(j - 1), Color.BLACK);
-            TextShape artist = new TextShape(x, y, "by " + songArtists.get(j - 1), Color.BLACK);
+            TextShape title = new TextShape(x, y, songTitles.get(j - 1),
+                Color.BLACK);
+            TextShape artist = new TextShape(x, y, "by " + songArtists.get(j
+                - 1), Color.BLACK);
             Shape bar1 = new Shape(x + 8, y, temp[1], 12, Color.MAGENTA);
             Shape bar2 = new Shape(x + 8, y + 12, temp[3], 12, Color.BLUE);
-            Shape bar3 = new Shape(x + 8, y + 24, temp[5], 12, new Color(237, 237, 78));
-            Shape bar4 = new Shape(x + 8, y + 36, temp[7], 12, Color.GREEN);        
+            Shape bar3 = new Shape(x + 8, y + 24, temp[5], 12, new Color(237,
+                237, 78));
+            Shape bar4 = new Shape(x + 8, y + 36, temp[7], 12, Color.GREEN);
             Shape bar5 = new Shape(x - temp[0], y, temp[0], 12, Color.MAGENTA);
-            Shape bar6 = new Shape(x - temp[2], y + 12, temp[2], 12, Color.BLUE);
-            Shape bar7 = new Shape(x - temp[4], y + 24, temp[4], 12, new Color(237, 237, 78));
-            Shape bar8 = new Shape(x - temp[6], y + 36, temp[6], 12, Color.GREEN);
+            Shape bar6 = new Shape(x - temp[2], y + 12, temp[2], 12,
+                Color.BLUE);
+            Shape bar7 = new Shape(x - temp[4], y + 24, temp[4], 12, new Color(
+                237, 237, 78));
+            Shape bar8 = new Shape(x - temp[6], y + 36, temp[6], 12,
+                Color.GREEN);
             title.move(-title.getWidth() / 2, -32);
             artist.move(-artist.getWidth() / 2, -17);
             title.setBackgroundColor(Color.WHITE);
@@ -396,8 +555,7 @@ public class GUIMusicWindow {
             window.addShape(bar7);
             window.addShape(bar8);
         }
-        for (int g = 0; g < glyphs.size(); g++)
-        {
+        for (int g = 0; g < glyphs.size(); g++) {
             window.addShape(glyphs.get(g));
             window.addShape(songText.get(g));
             window.addShape(artistText.get(g));

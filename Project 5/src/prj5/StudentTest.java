@@ -6,8 +6,8 @@
  * I will not lie, cheat, or steal, nor will I
  * accept the actions of those who do.
  * -- Allison Woods (awoods99)
- * --
- * --
+ * -- Luke Hall (lukehall033)
+ * -- Samantha Khan (ksamanatha18)
  */
 package prj5;
 
@@ -18,7 +18,7 @@ import student.TestCase;
  * 
  * Test class for the student class
  * 
- * @auther Samantha Khan (ksamantha18)
+ * @author Samantha Khan (ksamantha18)
  * @author Luke Hall (lukeh)
  * @author Allison Woods (awoods99)
  * @version 11/15/2019

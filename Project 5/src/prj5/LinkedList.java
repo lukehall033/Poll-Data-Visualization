@@ -6,8 +6,8 @@
  * I will not lie, cheat, or steal, nor will I
  * accept the actions of those who do.
  * -- Allison Woods (awoods99)
- * --
- * --
+ * -- Luke Hall (lukehall033)
+ * -- Samantha Khan (ksamantha18)
  */
 package prj5;
 
@@ -15,30 +15,44 @@ import java.util.Iterator;
 
 /**
  * 
+ * A class of linked nodes defined by an inner node class
+ * and an inner iterator class, used to store connected
+ * data of objects
  * 
- * 
- * @author Luke Hall (lukeh)
+ * @author Luke Hall (lukehall033)
  * @author Allison Woods (awoods99)
+ * @author Samantha Khan (ksamantha18)
  * @version 11/15/2019
- * @param <T> generic
+ * @param <T>
+ *            generic
  */
 public class LinkedList<T> implements Iterable<T> {
 
     /**
      * 
-     * Add class description here.
+     * An inner node class, which creates node
+     * objects with data and a next pointer
      * 
-     * @author
-     * @author Luke Hall (lukeh)
+     * @author Samantha Khan (ksamantha18)
+     * @author Luke Hall (lukehall033)
      * @author Allison Woods (awoods99)
      * @version 11/15/2019
      */
     private static class Node<T> {
+        /**
+         * the data field of the node
+         */
         private T data;
+        /**
+         * the next pointer of the node
+         */
         private Node<T> next;
+
 
         /**
          * 
+         * the node constructor, which creates a node
+         * with the data in the parameter
          * 
          * @param nodeData
          */
@@ -50,8 +64,9 @@ public class LinkedList<T> implements Iterable<T> {
 
         /**
          * 
+         * getter for the next node
          * 
-         * @return
+         * @return Node<T> next node
          */
         public Node<T> getNext() {
             return next;
@@ -60,8 +75,9 @@ public class LinkedList<T> implements Iterable<T> {
 
         /**
          * 
+         * getter for the nodes data
          * 
-         * @return
+         * @return T data
          */
         public T getData() {
             return data;
@@ -69,17 +85,18 @@ public class LinkedList<T> implements Iterable<T> {
     }
 
     /**
-     * f
+     * the size field of the linkedlist
      */
     private int size;
     /**
-     * f
+     * the first node in the linkedList
      */
     private Node<T> head;
 
 
     /**
-     * 
+     * The linkedlist constructor, which initially creates
+     * an empty list of size 0
      */
     public LinkedList() {
         size = 0;
@@ -89,9 +106,9 @@ public class LinkedList<T> implements Iterable<T> {
 
     /**
      * 
+     * a getter for the size of the list
      * 
      * @return int size
-     * 
      */
     public int getSize() {
         return size;
@@ -100,6 +117,7 @@ public class LinkedList<T> implements Iterable<T> {
 
     /**
      * 
+     * this method checks to see if the list is empty
      * 
      * @return boolean bool
      */
@@ -109,7 +127,7 @@ public class LinkedList<T> implements Iterable<T> {
 
 
     /**
-     * 
+     * this method clears everything in the list
      */
     public void clear() {
         size = 0;
@@ -119,8 +137,11 @@ public class LinkedList<T> implements Iterable<T> {
 
     /**
      * 
+     * this method adds a new node to the list with data passed
+     * from the parameter
      * 
-     * @param newEntry T
+     * @param newEntry
+     *            T
      */
     public void add(T newEntry) {
         if (newEntry != null) {
@@ -139,7 +160,7 @@ public class LinkedList<T> implements Iterable<T> {
 
 
     /**
-     * 
+     * this method removes a node from the front of the list
      */
     public void remove() {
         if (!isEmpty()) {
@@ -151,13 +172,15 @@ public class LinkedList<T> implements Iterable<T> {
 
     /**
      * 
+     * this method returns the data of the node reffered to
+     * by the index thats passed by the parameter
      * 
-     * @param index int
+     * @param index
+     *            int
      * @return T info
      */
     public T get(int index) {
-        if (!isEmpty())
-        {
+        if (!isEmpty()) {
             int val = 1;
             Node<T> current = head;
             while (val != index) {
@@ -172,34 +195,17 @@ public class LinkedList<T> implements Iterable<T> {
 
     /**
      * 
+     * this method utilizes the iterator to create a
+     * string representation of the linkedlist
      * 
      * @return String toString
      */
     public String toString() {
-//        if (isEmpty())
-//        {
-//            return "[]";
-//        }
-//        String result = "[";
-//        Node<T> current = head;
-//        while (current != null)
-//        {
-//            result += current.data.toString();
-//            current = current.next;
-//            if (current != null)
-//            {
-//                result += ", ";
-//            }
-//        }
-//        result += "]";
-//        return result;
         String result = "[";
         Iterator<T> listIterator = iterator();
-        while (listIterator.hasNext())
-        {
+        while (listIterator.hasNext()) {
             result += listIterator.next().toString();
-            if (listIterator.hasNext())
-            {
+            if (listIterator.hasNext()) {
                 result += ", ";
             }
         }
@@ -210,8 +216,10 @@ public class LinkedList<T> implements Iterable<T> {
 
     /**
      * 
+     * this method creates a new iterator from the
+     * inner iterator class
      * 
-     * @return
+     * @return Iterator<T> iterator
      */
     @Override
     public Iterator<T> iterator() {
@@ -221,22 +229,28 @@ public class LinkedList<T> implements Iterable<T> {
 
     /**
      * 
-     * Add class description here.
+     * This class is an inner iterator that can cycle through
+     * a linkedlist
      * 
      * 
      * @author Luke Hall (lukeh)
      * @author Allison Woods (awoods99)
+     * @author Samantha Khan (ksamantha18)
      * @version 11/15/2019
-     * @param T thing
+     * @param T
+     *            generic
      */
     private class LinkedListIterator<A> implements Iterator<T> {
         /**
-         * f
+         * the field representing the current node
          */
         private Node<T> current;
 
+
         /**
          * 
+         * the linkedlistiterator constructor, which points current
+         * to the first node in the linkedlist
          * 
          * @param Llist
          */
@@ -247,8 +261,9 @@ public class LinkedList<T> implements Iterable<T> {
 
         /**
          * 
+         * checks if the list has a next value
          * 
-         * @return
+         * @return boolean bool
          */
         public boolean hasNext() {
             return current != null;
@@ -257,6 +272,8 @@ public class LinkedList<T> implements Iterable<T> {
 
         /**
          * 
+         * this moves the iterator one node and returns the data
+         * it was pointing at
          * 
          * @return
          */
