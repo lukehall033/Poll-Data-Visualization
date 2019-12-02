@@ -16,7 +16,7 @@ import java.util.Comparator;
 /**
  * 
  * 
- * @author
+ * 
  * @author Luke Hall (lukeh)
  * @author Allison Woods (awoods99)
  * @version 11/15/2019
@@ -44,10 +44,10 @@ public class Song implements Comparable<Song> {
     /**
      * 
      * 
-     * @param songName
-     * @param songArtist
-     * @param songYear
-     * @param songGenre
+     * @param songName song
+     * @param songArtist artist
+     * @param songYear year
+     * @param songGenre genre
      */
     public Song(
         String songName,
@@ -64,7 +64,7 @@ public class Song implements Comparable<Song> {
     /**
      * 
      * 
-     * @return
+     * @return String name
      */
     public String getName() {
         return this.name;
@@ -74,7 +74,7 @@ public class Song implements Comparable<Song> {
     /**
      * 
      * 
-     * @return
+     * @return String artist
      */
     public String getArtist() {
         return this.artist;
@@ -84,7 +84,7 @@ public class Song implements Comparable<Song> {
     /**
      * 
      * 
-     * @return
+     * @return int year
      */
     public int getYear() {
         return this.year;
@@ -94,7 +94,7 @@ public class Song implements Comparable<Song> {
     /**
      * 
      * 
-     * @return
+     * @return String genre
      */
     public String getGenre() {
         return this.genre;
@@ -104,7 +104,7 @@ public class Song implements Comparable<Song> {
     /**
      * 
      * 
-     * @return
+     * @return String toString
      */
     public String toString() {
         return (getName() + " by: " + getArtist() + ", released: " + getYear()
@@ -115,8 +115,8 @@ public class Song implements Comparable<Song> {
     /**
      * 
      * 
-     * @param obj
-     * @return
+     * @param obj obj
+     * @return boolean bool
      */
     public boolean equals(Object obj) {
         if (obj == null) {
@@ -148,8 +148,15 @@ public class Song implements Comparable<Song> {
     /**
      * f
      */
+<<<<<<< HEAD
     public static Comparator<Song> CompareByTitle = new Comparator<Song>() {
         public int compare(Song s, Song s2) {
+=======
+    public static Comparator<Song> compareByTitle = new Comparator<Song>()
+    {
+        public int compare(Song s, Song s2)
+        {
+>>>>>>> branch 'master' of https://github.com/lukehall033/Project5.git
             return (s.getName().compareTo(s2.getName()));
         }
     };

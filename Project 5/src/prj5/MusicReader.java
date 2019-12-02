@@ -6,7 +6,6 @@ package prj5;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Scanner;
 import bsh.ParseException;
 
@@ -30,14 +29,25 @@ public class MusicReader {
      * 
      * @param musicFileName
      * @param surveyFileName
+     * @throws FileNotFoundException 
+     * @throws ParseException 
      * @throws Exception
      */
+<<<<<<< HEAD
     public MusicReader(String musicFileName, String surveyFileName)
         throws Exception {
+=======
+    public MusicReader(String musicFileName, String surveyFileName) throws FileNotFoundException
+    {
+>>>>>>> branch 'master' of https://github.com/lukehall033/Project5.git
         songs = readSongFile(musicFileName);
         students = readSurveyFile(surveyFileName);
+<<<<<<< HEAD
         MusicWindow window = new MusicWindow(new MusicCalculator(students,
             songs));
+=======
+        GUIMusicWindow window = new GUIMusicWindow(new MusicCalculator(students, songs));
+>>>>>>> branch 'master' of https://github.com/lukehall033/Project5.git
     }
 
 
@@ -46,9 +56,16 @@ public class MusicReader {
      * 
      * @param filename
      * @return
+     * @throws ParseException 
+     * @throws FileNotFoundException 
      * @throws Exception
      */
+<<<<<<< HEAD
     private Song[] readSongFile(String filename) throws Exception {
+=======
+    private Song[] readSongFile(String filename) throws FileNotFoundException
+    {
+>>>>>>> branch 'master' of https://github.com/lukehall033/Project5.git
         @SuppressWarnings("resource")
         Scanner scan = new Scanner(new File(filename));
         // Song[] arraySongs = new Song[70];
@@ -64,19 +81,28 @@ public class MusicReader {
             String bandName = songList[1];
             int year = Integer.valueOf(songList[2]);
             String genre = songList[3];
+<<<<<<< HEAD
 
             if (songList.length < 4) {
                 throw new ParseException();
             }
 
+=======
+             
+
+                
+>>>>>>> branch 'master' of https://github.com/lukehall033/Project5.git
             Song newSong = new Song(songName, bandName, year, genre);
             // arraySongs[counter] = newSong;
             list.add(newSong);
             counter++;
         }
+<<<<<<< HEAD
         if (counter == 0) {
             throw new Exception();
         }
+=======
+>>>>>>> branch 'master' of https://github.com/lukehall033/Project5.git
         scan.close();
         Song[] arraySongs = new Song[counter];
         for (int i = 0; i < list.size(); i++) {
@@ -91,10 +117,16 @@ public class MusicReader {
      * 
      * @param filename
      * @return
+     * @throws FileNotFoundException 
      * @throws Exception
      */
+<<<<<<< HEAD
     private LinkedList<Student> readSurveyFile(String filename)
         throws Exception {
+=======
+    private LinkedList<Student> readSurveyFile(String filename) throws FileNotFoundException
+    {
+>>>>>>> branch 'master' of https://github.com/lukehall033/Project5.git
         LinkedList<Student> student = new LinkedList<Student>();
         Scanner scan = new Scanner(new File(filename));
         ArrayList<String> studentAnswers;

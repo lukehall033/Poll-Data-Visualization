@@ -16,7 +16,11 @@ import java.util.ArrayList;
 /**
  * 
  * 
+<<<<<<< HEAD
  * @author
+=======
+ * 
+>>>>>>> branch 'master' of https://github.com/lukehall033/Project5.git
  * @author Luke Hall (lukeh)
  * @author Allison Woods (awoods99)
  * @version 11/15/2019
@@ -52,12 +56,12 @@ public class Student {
     /**
      * 
      * 
-     * @param studentID
-     * @param submitDate
-     * @param studentMajor
-     * @param studentRegion
-     * @param studentHobby
-     * @param studentResponses
+     * @param studentID f
+     * @param submitDate f
+     * @param studentMajor f
+     * @param studentRegion f
+     * @param studentHobby f
+     * @param studentResponses f
      */
     public Student(
         int studentID,
@@ -78,7 +82,7 @@ public class Student {
     /**
      * 
      * 
-     * @return
+     * @return int id
      */
     public int getID() {
         return this.id;
@@ -88,7 +92,7 @@ public class Student {
     /**
      * 
      * 
-     * @return
+     * @return String date
      */
     public String getDate() {
         return this.date;
@@ -98,7 +102,7 @@ public class Student {
     /**
      * 
      * 
-     * @return
+     * @return String major
      */
     public String getMajor() {
         return this.major;
@@ -108,7 +112,7 @@ public class Student {
     /**
      * 
      * 
-     * @return
+     * @return String region
      */
     public String getRegion() {
         return this.region;
@@ -118,7 +122,7 @@ public class Student {
     /**
      * 
      * 
-     * @return
+     * @return String hobby
      */
     public String getHobby() {
         return this.hobby;
@@ -128,7 +132,7 @@ public class Student {
     /**
      * 
      * 
-     * @return
+     * @return ArrayList<String> responses
      */
     public ArrayList<String> getResponses() {
         return this.responses;
@@ -138,7 +142,7 @@ public class Student {
     /**
      * 
      * 
-     * @return
+     * @return String toString
      */
     public String toString() {
         return ("Student " + getID() + " submitted on: " + getDate()
@@ -150,8 +154,8 @@ public class Student {
     /**
      * 
      * 
-     * @param obj
-     * @return
+     * @param obj obj
+     * @return boolean bool
      */
     public boolean equals(Object obj) {
         if (obj == null) {

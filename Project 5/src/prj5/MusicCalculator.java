@@ -1,7 +1,6 @@
 package prj5;
 
 import java.util.Arrays;
-import java.util.Collections;
 
 /**
  * f
@@ -25,7 +24,9 @@ public class MusicCalculator {
      * f
      * 
      * @param students
+     *            linkedlist
      * @param songs
+     *            songs
      */
     public MusicCalculator(LinkedList<Student> students, Song[] songs) {
         studentList = students;
@@ -36,7 +37,11 @@ public class MusicCalculator {
     /**
      * f
      * 
+<<<<<<< HEAD
      * @return
+=======
+     * @return LinkedList<Student> students
+>>>>>>> branch 'master' of https://github.com/lukehall033/Project5.git
      */
     public LinkedList<Student> getStudents() {
         return studentList;
@@ -46,7 +51,11 @@ public class MusicCalculator {
     /**
      * f
      * 
+<<<<<<< HEAD
      * @return
+=======
+     * @return Song[] songs
+>>>>>>> branch 'master' of https://github.com/lukehall033/Project5.git
      */
     public Song[] getSongs() {
         return songList;
@@ -56,9 +65,13 @@ public class MusicCalculator {
     /**
      * f
      */
+<<<<<<< HEAD
     public void hobbySortedByGenre() // these are the two things we have to
                                      // print out to pass the tests
     {
+=======
+    public void hobbySortedByGenre() {
+>>>>>>> branch 'master' of https://github.com/lukehall033/Project5.git
         // Song[] sortedSongList = songList;
         Song[] sortedSongList = new Song[songList.length];
         for (int f = 0; f < songList.length; f++) {
@@ -96,7 +109,11 @@ public class MusicCalculator {
                         .equals("Yes")) {
                         heardReading++;
                     }
+<<<<<<< HEAD
                     if (!(songIndex + 1 > (studentList.get(j + 1).getResponses()
+=======
+                    if ((songIndex + 1 <= (studentList.get(j + 1).getResponses()
+>>>>>>> branch 'master' of https://github.com/lukehall033/Project5.git
                         .size() - 1))) {
                         if (studentList.get(j + 1).getResponses().get(songIndex
                             + 1).equals("Yes")) {
@@ -113,7 +130,11 @@ public class MusicCalculator {
                         .equals("Yes")) {
                         heardArt++;
                     }
+<<<<<<< HEAD
                     if (!(songIndex + 1 > (studentList.get(j + 1).getResponses()
+=======
+                    if ((songIndex + 1 <= (studentList.get(j + 1).getResponses()
+>>>>>>> branch 'master' of https://github.com/lukehall033/Project5.git
                         .size() - 1))) {
                         if (studentList.get(j + 1).getResponses().get(songIndex
                             + 1).equals("Yes")) {
@@ -130,7 +151,11 @@ public class MusicCalculator {
                         .equals("Yes")) {
                         heardSports++;
                     }
+<<<<<<< HEAD
                     if (!(songIndex + 1 > (studentList.get(j + 1).getResponses()
+=======
+                    if ((songIndex + 1 <= (studentList.get(j + 1).getResponses()
+>>>>>>> branch 'master' of https://github.com/lukehall033/Project5.git
                         .size() - 1))) {
                         if (studentList.get(j + 1).getResponses().get(songIndex
                             + 1).equals("Yes")) {
@@ -147,7 +172,11 @@ public class MusicCalculator {
                         .equals("Yes")) {
                         heardMusic++;
                     }
+<<<<<<< HEAD
                     if (!(songIndex + 1 > (studentList.get(j + 1).getResponses()
+=======
+                    if ((songIndex + 1 <= (studentList.get(j + 1).getResponses()
+>>>>>>> branch 'master' of https://github.com/lukehall033/Project5.git
                         .size() - 1))) {
                         if (studentList.get(j + 1).getResponses().get(songIndex
                             + 1).equals("Yes")) {
@@ -195,7 +224,11 @@ public class MusicCalculator {
         for (int f = 0; f < songList.length; f++) {
             sortedSongList[f] = songList[f];
         }
+<<<<<<< HEAD
         Arrays.sort(sortedSongList, Song.CompareByTitle);
+=======
+        Arrays.sort(sortedSongList, Song.compareByTitle);
+>>>>>>> branch 'master' of https://github.com/lukehall033/Project5.git
         for (int i = 0; i < sortedSongList.length; i++) {
             double totalReading = 0;
             double totalArt = 0;
@@ -227,7 +260,11 @@ public class MusicCalculator {
                         .equals("Yes")) {
                         heardReading++;
                     }
+<<<<<<< HEAD
                     if (!(songIndex + 1 > (studentList.get(j + 1).getResponses()
+=======
+                    if ((songIndex + 1 <= (studentList.get(j + 1).getResponses()
+>>>>>>> branch 'master' of https://github.com/lukehall033/Project5.git
                         .size() - 1))) {
                         if (studentList.get(j + 1).getResponses().get(songIndex
                             + 1).equals("Yes")) {
@@ -244,7 +281,11 @@ public class MusicCalculator {
                         .equals("Yes")) {
                         heardArt++;
                     }
+<<<<<<< HEAD
                     if (!(songIndex + 1 > (studentList.get(j + 1).getResponses()
+=======
+                    if ((songIndex + 1 <= (studentList.get(j + 1).getResponses()
+>>>>>>> branch 'master' of https://github.com/lukehall033/Project5.git
                         .size() - 1))) {
                         if (studentList.get(j + 1).getResponses().get(songIndex
                             + 1).equals("Yes")) {
@@ -261,7 +302,11 @@ public class MusicCalculator {
                         .equals("Yes")) {
                         heardSports++;
                     }
+<<<<<<< HEAD
                     if (!(songIndex + 1 > (studentList.get(j + 1).getResponses()
+=======
+                    if ((songIndex + 1 <= (studentList.get(j + 1).getResponses()
+>>>>>>> branch 'master' of https://github.com/lukehall033/Project5.git
                         .size() - 1))) {
                         if (studentList.get(j + 1).getResponses().get(songIndex
                             + 1).equals("Yes")) {
@@ -278,7 +323,11 @@ public class MusicCalculator {
                         .equals("Yes")) {
                         heardMusic++;
                     }
+<<<<<<< HEAD
                     if (!(songIndex + 1 > (studentList.get(j + 1).getResponses()
+=======
+                    if ((songIndex + 1 <= (studentList.get(j + 1).getResponses()
+>>>>>>> branch 'master' of https://github.com/lukehall033/Project5.git
                         .size() - 1))) {
                         if (studentList.get(j + 1).getResponses().get(songIndex
                             + 1).equals("Yes")) {

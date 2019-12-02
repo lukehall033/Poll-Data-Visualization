@@ -39,7 +39,11 @@ public class Input2019FReferenceTest extends student.TestCase {
         + "MusicSurveyData2018Intro.csv and SongList2018Intro.csv")
     public void testMain09() throws Exception {
 
+<<<<<<< HEAD
         Input.main(new String[] { "MusicSurveyData2018Intro.csv",
+=======
+        Input.main(new String[] { "MusicSurveyData2018Intro.csv", 
+>>>>>>> branch 'master' of https://github.com/lukehall033/Project5.git
             "SongList2018Intro.csv" });
 
         fileName = "Output09_2018.txt";
@@ -79,7 +83,11 @@ public class Input2019FReferenceTest extends student.TestCase {
         + "MusicSurveyData2018HolesLess.csv and SongList2018LessSong.csv")
     public void testMain11() throws Exception {
 
+<<<<<<< HEAD
         Input.main(new String[] { "MusicSurveyData2018HolesLess.csv",
+=======
+        Input.main(new String[] { "MusicSurveyData2018HolesLess.csv", 
+>>>>>>> branch 'master' of https://github.com/lukehall033/Project5.git
             "SongList2018LessSongs.csv" });
 
         fileName = "Output11_2018.txt";
@@ -120,7 +128,11 @@ public class Input2019FReferenceTest extends student.TestCase {
         + "MusicSurveyData2018.csv and SongList2018.csv")
     public void testMain12() throws Exception {
 
+<<<<<<< HEAD
         Input.main(new String[] { "MusicSurveyData2018HolesHalf.csv",
+=======
+        Input.main(new String[] { "MusicSurveyData2018HolesHalf.csv", 
+>>>>>>> branch 'master' of https://github.com/lukehall033/Project5.git
             "SongList2018HalfSongs.csv" });
 
         fileName = "Output12_2018.txt";

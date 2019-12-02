@@ -16,10 +16,11 @@ import java.util.Iterator;
 /**
  * 
  * 
- * @author
- * @author
+ * 
+ * @author Luke Hall (lukeh)
  * @author Allison Woods (awoods99)
  * @version 11/15/2019
+ * @param <T> generic
  */
 public class LinkedList<T> implements Iterable<T> {
 
@@ -90,7 +91,8 @@ public class LinkedList<T> implements Iterable<T> {
     /**
      * 
      * 
-     * @return
+     * @return int size
+     * 
      */
     public int getSize() {
         return size;
@@ -100,7 +102,7 @@ public class LinkedList<T> implements Iterable<T> {
     /**
      * 
      * 
-     * @return
+     * @return boolean bool
      */
     public boolean isEmpty() {
         return (size == 0);
@@ -119,10 +121,10 @@ public class LinkedList<T> implements Iterable<T> {
     /**
      * 
      * 
-     * @param newEntry
+     * @param newEntry T
      */
     public void add(T newEntry) {
-        if (!(newEntry == null)) {
+        if (newEntry != null) {
             if (isEmpty()) {
                 head = new Node<T>(newEntry);
                 size++;
@@ -151,8 +153,8 @@ public class LinkedList<T> implements Iterable<T> {
     /**
      * 
      * 
-     * @param index
-     * @return
+     * @param index int
+     * @return T info
      */
     public T get(int index) {
         if (!isEmpty()) {
@@ -171,7 +173,7 @@ public class LinkedList<T> implements Iterable<T> {
     /**
      * 
      * 
-     * @return
+     * @return String toString
      */
     public String toString() {
 // if (isEmpty())
@@ -219,10 +221,11 @@ public class LinkedList<T> implements Iterable<T> {
      * 
      * Add class description here.
      * 
-     * @author
+     * 
      * @author Luke Hall (lukeh)
      * @author Allison Woods (awoods99)
      * @version 11/15/2019
+     * @param T thing
      */
     private class LinkedListIterator<A> implements Iterator<T> {
         /**
@@ -236,8 +239,8 @@ public class LinkedList<T> implements Iterable<T> {
          * 
          * @param Llist
          */
-        public LinkedListIterator(LinkedList<T> Llist) {
-            current = Llist.head;
+        public LinkedListIterator(LinkedList<T> lList) {
+            current = lList.head;
         }
 
 

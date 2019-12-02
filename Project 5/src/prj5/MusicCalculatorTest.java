@@ -8,7 +8,7 @@ import student.TestCase;
 
 /**
  * @author samkahn1
- *
+ * 
  */
 public class MusicCalculatorTest extends TestCase {
     private MusicCalculator mc;
@@ -23,16 +23,20 @@ public class MusicCalculatorTest extends TestCase {
     private ArrayList<String> responses;
 
 
+    /**
+     * sets up
+     */
     public void setUp() {
         songs = new Song[3];
         students = new LinkedList<Student>();
-        responses = new ArrayList<String>();
+        ArrayList<String> responses = new ArrayList<String>();
         responses.add("Yes");
         responses.add("No");
         responses.add("Yes");
         responses.add("Yes");
         mc = new MusicCalculator(students, songs);
 
+<<<<<<< HEAD
         stud1 = new Student(12, "12/10/19", "CS", "Southeast", "reading",
             responses);
 
@@ -41,18 +45,39 @@ public class MusicCalculatorTest extends TestCase {
 
         stud3 = new Student(13, "12/12/19", "CS", "Northeast", "reading",
             responses);
+=======
+        stud1 = new Student(12, "12/10/19", "CS", "Southeast",
+            "reading", responses);
+
+        stud2 = new Student(13, "12/11/19", "Math CMDA", "Southeast",
+            "reading", responses);
+
+        stud3 = new Student(13, "12/12/19", "CS", "Northeast",
+            "reading", responses);
+>>>>>>> branch 'master' of https://github.com/lukehall033/Project5.git
 
         students.add(stud1);
         students.add(stud2);
+<<<<<<< HEAD
 
         song1 = new Song("Hello", "Adele", 1980, "rock");
         song2 = new Song("Baby", "JB", 1980, "pop");
         song3 = new Song("Liar", "Adele", 1972, "rock");
+=======
+        
+        students.add(stud3);
+
+        
+        Song song1 = new Song("Hello", "Adele", 1980, "rock");
+        Song song2 = new Song("Baby", "JB", 1980, "pop");
+        Song song3 = new Song("Liar", "Adele", 1972, "rock");
+>>>>>>> branch 'master' of https://github.com/lukehall033/Project5.git
 
         songs[0] = song1;
         songs[1] = song2;
         songs[2] = song3;
 
+<<<<<<< HEAD
     }
 
 
@@ -69,6 +94,23 @@ public class MusicCalculatorTest extends TestCase {
     public void testHobbySortedByGenre() {
         mc.hobbySortedByGenre();
         assertEquals(song3, songs[1]);
+=======
+>>>>>>> branch 'master' of https://github.com/lukehall033/Project5.git
     }
 
+
+    /**
+     * tests getSongs
+     */
+    public void testGetSongs() {
+        assertEquals(songs, mc.getSongs());
+    }
+
+
+    /**
+     * tests getStudents
+     */
+    public void testGetStudents() {
+        assertEquals(students, mc.getStudents());
+    }
 }

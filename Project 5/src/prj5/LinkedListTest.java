@@ -39,12 +39,24 @@ public class LinkedListTest extends TestCase {
     public void setUp() {
         list = new LinkedList<Student>();
         list2 = new LinkedList<Student>();
+<<<<<<< HEAD
         student1 = new Student(1, "11/17/2019 4:19", "CS", "Southeastern",
             "video games", new ArrayList<String>());
         student2 = new Student(2, "11/17/2019 4:19", "CS", "Southeastern",
             "video games", new ArrayList<String>());
         student3 = new Student(3, "11/17/2019 4:19", "CS", "Southeastern",
             "video games", new ArrayList<String>());
+=======
+        student1 = new Student(1, "11/17/2019 4:19", 
+            "CS", "Southeastern", "video games", 
+            new ArrayList<String>());
+        student2 = new Student(2, "11/17/2019 4:19", 
+            "CS", "Southeastern", "video games", 
+            new ArrayList<String>());
+        student3 = new Student(3, "11/17/2019 4:19", 
+            "CS", "Southeastern", "video games", 
+            new ArrayList<String>());
+>>>>>>> branch 'master' of https://github.com/lukehall033/Project5.git
         list.add(student1);
         list.add(student2);
     }
